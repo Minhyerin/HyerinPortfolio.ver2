@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "styled-components";
 import { Routes, Rou } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -22,6 +22,7 @@ const Ul = styled.ul`
     text-align: center;
     width: 100%;
     a {
+      display: inline-block;
       color: #fff;
     }
   }
@@ -29,14 +30,26 @@ const Ul = styled.ul`
 
 const menulist = ["work", "about", "resume"];
 const Navbar = () => {
+  const activeStyle = {
+    width: "100%",
+    padding: "3px 0",
+    backgroundColor: "#ddd",
+    color: "#333",
+    borderRadius: "10px",
+  };
+
   return (
     <Container>
       <Ul>
         {menulist.map((menu) => (
           <li>
-            <Link to={"/" + menu} href="#">
+            <NavLink
+              style={({ isActive }) => (isActive ? activeStyle : {})}
+              to={"/" + menu}
+              href="#"
+            >
               {menu}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </Ul>
