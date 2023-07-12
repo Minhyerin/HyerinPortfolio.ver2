@@ -24,6 +24,7 @@ const Ul = styled.ul`
     a {
       display: inline-block;
       color: #fff;
+      padding: 3px 0;
     }
   }
 `;
@@ -31,11 +32,10 @@ const Ul = styled.ul`
 const menulist = ["work", "about", "resume"];
 const Navbar = () => {
   const activeStyle = {
-    width: "100%",
-    padding: "3px 0",
+    width: "90%",
     backgroundColor: "#ddd",
     color: "#333",
-    borderRadius: "10px",
+    borderRadius: "15px",
   };
 
   return (
