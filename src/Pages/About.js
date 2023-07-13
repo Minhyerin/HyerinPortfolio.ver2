@@ -1,7 +1,12 @@
 import React from "react";
+import { styled } from "styled-components";
 
+const Container = styled.div`
+  width: 100%;
+  height:100vh;
+`;
 const About = () => {
-  return <div>about</div>;
+  return <Container>about</Container>;
 };
 
 export default About;

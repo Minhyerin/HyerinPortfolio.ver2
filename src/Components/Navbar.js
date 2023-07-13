@@ -10,7 +10,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 const Ul = styled.ul`
-  width: 500px;
+  width: 400px;
   padding: 10px 20px;
   display: flex;
   justify-content: center;
@@ -23,56 +23,34 @@ const Ul = styled.ul`
     width: 100%;
     a {
       display: inline-block;
-      width: 100%;
+      width: 90%;
       color: #333;
       padding: 3px 0;
+      border-radius: 20px;
       transition: 0.4s;
-      &.off {
-        color: #333;
-      }
-      &.active {
-        color: #fff;
-      }
     }
   }
 `;
 
 const menulist = ["work", "about", "resume"];
 const Navbar = () => {
-  const [isActive, setActive] = useState(false);
-  const handleOnActive = () => {
-    setActive(!isActive);
-    return;
+  const activeStyle = {
+    color: "#fff",
+    backgroundColor: "#333",
   };
-  // const activeStyle = {
-  //   width: "90%",
-  //   backgroundColor: "#ddd",
-  //   color: "#333",
-  //   borderRadius: "15px",
-  //   transition: "0.4s",
-  // };
 
   return (
     <Container>
       <Ul>
-        {menulist.map((menu, index) => (
+        {menulist.map((menu) => (
           <li>
             <NavLink
-              key={index}
-              onClick={handleOnActive}
-              className={isActive ? "active" : "off"}
-              to={"/" + menu}
-              href="#"
-            >
-              {menu}
-            </NavLink>
-            {/* <NavLink
               style={({ isActive }) => (isActive ? activeStyle : {})}
               to={"/" + menu}
               href="#"
             >
               {menu}
-            </NavLink> */}
+            </NavLink>
           </li>
         ))}
       </Ul>

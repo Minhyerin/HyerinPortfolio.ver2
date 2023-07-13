@@ -41,11 +41,11 @@ const TitleOne = styled.div`
     }
     .r {
       display: block;
-      animation: ${animation} 0.6s 0.52s linear forwards;
+      animation: ${animation} 0.6s 0.52s linear;
     }
     .o {
       display: block;
-      animation: ${animation} 0.6s 0.54s linear forwards;
+      animation: ${animation} 0.6s 0.54s linear;
     }
     .n {
       display: block;

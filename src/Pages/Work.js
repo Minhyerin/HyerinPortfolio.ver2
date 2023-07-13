@@ -23,6 +23,7 @@ const Work = () => {
       <WorkItem />
       <WorkItem />
       <WorkItem />
+      <WorkItem />
     </Container>
   );
 };

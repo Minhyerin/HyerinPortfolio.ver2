@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import Main from "./Pages/Main";
 import Header from "./Components/Header";
@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Work from "./Pages/Work";
 import Resume from "./Pages/Resume";
 import Contact from "./Pages/Contact";
+import { WorkVeiw } from "./Pages/WorkVeiw";
 import { Routes, Route } from "react-router-dom";
 import { styled } from "styled-components";
 
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/work/:id" element={<WorkVeiw />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
