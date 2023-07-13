@@ -21,7 +21,7 @@ const Header = () => {
         </Link>
       </div>
       <div>
-        <a href="#">CONTACT</a>
+        <Link to="/contact">CONTACT</Link>
       </div>
     </Container>
   );

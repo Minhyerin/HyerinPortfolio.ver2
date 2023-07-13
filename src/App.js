@@ -6,6 +6,7 @@ import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
 import Work from "./Pages/Work";
 import Resume from "./Pages/Resume";
+import Contact from "./Pages/Contact";
 import { Routes, Route } from "react-router-dom";
 import { styled } from "styled-components";
 
@@ -25,9 +26,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/work:id" element={<Work />} />
+        <Route path="/work" element={<Work />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Navbar />
     </Container>
