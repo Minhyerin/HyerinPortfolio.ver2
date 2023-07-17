@@ -5,21 +5,30 @@ import { useNavigate, useParams } from "react-router-dom";
 const Container = styled.div`
   width: 10%;
   height: 450px;
-  border: 1px solid #eee;
-  border-radius: 150px;
-
+  border-radius: 20px;
+  overflow: hidden;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.5s;
+  filter: brightness(0.4);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   &:hover {
-    width: 15%;
-    border-radius: 70px;
+    width: 25%;
+    filter: brightness(1);
   }
 `;
 
-const WorkItem = () => {
+const WorkItem = ({work}) => {
   const navigate = useNavigate();
 
-  return <Container onClick={() => navigate("/work/:id")}>Item1</Container>;
+  return (
+  <Container onClick={() => navigate(`/work/${work.id}`)}>
+    <img src={work.src} />
+  </Container>
+  )
 };
 
 export default WorkItem;

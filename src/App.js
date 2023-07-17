@@ -20,14 +20,49 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+const works = [
+  {
+    id: 1,
+    src: "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_2.png",
+    title: "Hugmom",
+    role: "Header / shoppingmall / Footer Page Design & publishing",
+    },
+  {
+    id: 2,
+    src: "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_1.png",
+    title: "React Shoppingmall",
+    role: "Design & Publishing",
+  },
+  {
+    id: 3,
+    src: "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_3.png",
+    title: "Hugmom",
+    role: "",
+  },
+  {
+    id: 4,
+    src: "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_4.png",
+    title: "Hugmom",
+    role: "",
+  },
+  {
+    id: 5,
+    src: "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_5.png",
+    title: "Hugmom",
+    role: "",
+  },
+]
+
 function App() {
   return (
     <Container>
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/work" element={<Work />} />
-        <Route path="/work/:id" element={<WorkVeiw />} />
+        <Route path="/work" element={<Work works={works} />} />
+        {works.map((it) => (
+          <Route path={`/work/${it.id}`} element={<WorkVeiw work={it} />} />
+        ))}
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />

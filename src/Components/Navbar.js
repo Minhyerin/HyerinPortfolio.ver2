@@ -32,7 +32,7 @@ const Ul = styled.ul`
   }
 `;
 
-const menulist = ["work", "about", "resume"];
+const menulist = ["Home", "Work", "About", "Resume"];
 const Navbar = () => {
   const activeStyle = {
     color: "#fff",
@@ -46,7 +46,7 @@ const Navbar = () => {
           <li>
             <NavLink
               style={({ isActive }) => (isActive ? activeStyle : {})}
-              to={"/" + menu}
+              to={menu.toLowerCase() === "home" ? "/" : "/" + menu.toLowerCase()}
               href="#"
             >
               {menu}
