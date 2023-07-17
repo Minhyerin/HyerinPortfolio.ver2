@@ -3,11 +3,11 @@ import { styled } from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  height:100vh;
+  height: 100vh;
 `;
 
 const Contact = () => {
-  return <Container></Container>;
+  return <Container>contact</Container>;
 };
 
 export default Contact;
