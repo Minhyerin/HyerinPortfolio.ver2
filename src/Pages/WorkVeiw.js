@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
 import { keyframes } from "styled-components";
-import WorkdetailView from "./WorkdetailView";
+import WorkdetailView from "../Components/WorkdetailView";
 
 const lineAnimation = keyframes`
   0% {
