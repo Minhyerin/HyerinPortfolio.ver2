@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
 import WorkItem from "../Components/WorkItem";
 import hugmom from "../imgs/mobile.png";
+import { WorkData } from "../data/workdata";
 
 const Container = styled.div`
   width: 100%;
@@ -17,13 +18,11 @@ const Item = styled.div`
   cursor: pointer;
 `;
 
-
-
-const Work = ({works}) => {
+const Work = () => {
   return (
     <Container>
-      {works.map((work, index) => (
-        <WorkItem key={index} work={work} />
+      {WorkData.map((work, index) => (
+        <WorkItem key={index} work={work} index={index} />
       ))}
     </Container>
   );

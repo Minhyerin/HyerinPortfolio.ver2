@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useMemo } from "react";
 import { styled } from "styled-components";
 import { keyframes } from "styled-components";
-import useInterval from "../hooks/useInterval";
 
 const animation = keyframes`
   0% {
@@ -125,10 +123,10 @@ const Main = () => {
       </TitleOne>
       <TitleTwo></TitleTwo>
       <div>
-        <p>
+        {/* <p>
           안녕하세요! 프론트엔드 개발자 민혜린 포트폴리오 입니다. 자유롭게
           둘러보시고, 저를 찾아주세요!
-        </p>
+        </p> */}
       </div>
     </Container>
   );

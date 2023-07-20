@@ -23,7 +23,7 @@ const Ul = styled.ul`
     width: 100%;
     a {
       display: inline-block;
-      width: 90%;
+      width: 90%;q
       color: #333;
       padding: 3px 0;
       border-radius: 20px;
@@ -46,7 +46,9 @@ const Navbar = () => {
           <li>
             <NavLink
               style={({ isActive }) => (isActive ? activeStyle : {})}
-              to={menu.toLowerCase() === "home" ? "/" : "/" + menu.toLowerCase()}
+              to={
+                menu.toLowerCase() === "home" ? "/" : "/" + menu.toLowerCase()
+              }
               href="#"
             >
               {menu}

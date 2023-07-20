@@ -21,14 +21,17 @@ const Container = styled.div`
   }
 `;
 
-const WorkItem = ({work}) => {
+const WorkItem = ({ work, index }) => {
   const navigate = useNavigate();
 
   return (
-  <Container onClick={() => navigate(`/work/${work.id}`)}>
-    <img src={work.src} />
-  </Container>
-  )
+    <Container
+      className={`item_${index}`}
+      onClick={() => navigate(`/work/${work.id}`)}
+    >
+      <img src={work.src} />
+    </Container>
+  );
 };
 
 export default WorkItem;
