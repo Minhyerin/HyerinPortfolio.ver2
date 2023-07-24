@@ -6,6 +6,7 @@ import { PiFigmaLogo } from "react-icons/pi";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Container = styled(motion.div)`
   width: 70%;
@@ -47,7 +48,7 @@ const Title = styled.div`
       margin-left: 10px;
     }
   }
-  span {
+  a {
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -88,15 +89,17 @@ const WorkdetailView = ({ toggleModal, work }) => {
       <Title>
         <h1>
           {work.title}
-          <FiExternalLink className="linkBtn" />
+          <Link>
+            <FiExternalLink className="linkBtn" />
+          </Link>
         </h1>
-        <span>
+        <Link>
           Figma
           <PiFigmaLogo className="figmaicon" />
-        </span>
+        </Link>
       </Title>
       <ContentWrapper>
-        <div>산후조리원 산모들을 위한 웹 / 모바일 사이트</div>
+        <div>{work.subtitle}</div>
         <Carousel>
           <Paper>
             <div className="box">1</div>

@@ -28,10 +28,10 @@ const Title = styled(motion.div)`
     font-size: 24px;
   }
 }
-`
+`;
 const SubTitle = styled(motion.div)`
   flex: 1;
-`
+`;
 const UnderLine = styled(motion.div)`
   width: 0;
   height: 2px;
@@ -83,11 +83,11 @@ const Form = styled.form`
     flex-direction: column;
     align-items: flex-start;
   }
-`
+`;
 const EmailBox = styled.div`
   flex: 1;
 `;
-const SocialBox  = styled.div`
+const SocialBox = styled.div`
   flex: 1;
 `;
 const Contact = () => {
@@ -118,21 +118,6 @@ const Contact = () => {
     },
   };
 
-  const subtextVariant = {
-    start: {
-      opacity: 0,
-      y: 20,
-    },
-    end: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 1,
-        durtaion: 2,
-      },
-    },
-  };
-
   const lineVariant = {
     start: {
       width: 0,
@@ -144,44 +129,59 @@ const Contact = () => {
       },
     },
   };
+  const handleOnSend = (e) => {
+    e.preventDefault();
+  };
   return (
-  <Container>
-    <ContentWrapper>
-      <Topdiv variants={TopVariant} initial="start" animate="end">
-        <Title variants={textVariant}><h1>CONTACT</h1></Title>
-        <SubTitle variants={textVariant}><p>EMAIL</p></SubTitle>
-        <SubTitle variants={textVariant}><p>SOCIALS</p></SubTitle>
-      </Topdiv>
-      <UnderLine variants={lineVariant} initial="start" animate="end" />
-      <Bottomdiv>
-        <ContactBox>
-          <Form>
-            <div>
-              <label for="name">Name<em>*</em></label>
-              <input id="name" type={"text"} placeholder="name"/>
-            </div>
-            <div>
-              <label for="email">Email<em>*</em></label>
-              <input id="email" type={"email"} placeholder="email" />
-            </div>
-            <div className="messageBox">
-              <label>Message<em>*</em></label>
-              <textarea placeholder="message" />
-            </div>
-            <button>Send</button>
-          </Form>
-        </ContactBox>
-        <EmailBox>
-          <p>rin1401@naver.com</p>
-        </EmailBox>
-        <SocialBox>
-          <p>Github</p>
-          <p>Blog</p>
-          <p>KakaoTalk</p>
-        </SocialBox>
-      </Bottomdiv>
-    </ContentWrapper>
-  </Container>
+    <Container>
+      <ContentWrapper>
+        <Topdiv variants={TopVariant} initial="start" animate="end">
+          <Title variants={textVariant}>
+            <h1>CONTACT</h1>
+          </Title>
+          <SubTitle variants={textVariant}>
+            <p>EMAIL</p>
+          </SubTitle>
+          <SubTitle variants={textVariant}>
+            <p>SOCIALS</p>
+          </SubTitle>
+        </Topdiv>
+        <UnderLine variants={lineVariant} initial="start" animate="end" />
+        <Bottomdiv>
+          <ContactBox>
+            <Form>
+              <div>
+                <label for="name">
+                  Name<em>*</em>
+                </label>
+                <input id="name" type={"text"} placeholder="name" />
+              </div>
+              <div>
+                <label for="email">
+                  Email<em>*</em>
+                </label>
+                <input id="email" type={"email"} placeholder="email" />
+              </div>
+              <div className="messageBox">
+                <label>
+                  Message<em>*</em>
+                </label>
+                <textarea placeholder="message" />
+              </div>
+              <button onClick={(e) => handleOnSend(e)}>Send</button>
+            </Form>
+          </ContactBox>
+          <EmailBox>
+            <p>rin1401@naver.com</p>
+          </EmailBox>
+          <SocialBox>
+            <p>Github</p>
+            <p>Blog</p>
+            <p>KakaoTalk</p>
+          </SocialBox>
+        </Bottomdiv>
+      </ContentWrapper>
+    </Container>
   );
 };
 
