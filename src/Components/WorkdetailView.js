@@ -1,20 +1,18 @@
 import React from "react";
 import { styled } from "styled-components";
 import { GrClose } from "react-icons/gr";
-import { FiExternalLink }  from "react-icons/fi";
-import { PiFigmaLogo }  from "react-icons/pi";
-import Carousel from "react-material-ui-carousel"
-import {Paper, Button} from "@mui/material" 
+import { FiExternalLink } from "react-icons/fi";
+import { PiFigmaLogo } from "react-icons/pi";
+import Carousel from "react-material-ui-carousel";
+import { Paper, Button } from "@mui/material";
+import { motion } from "framer-motion";
 
-const Container = styled.div`
-  width: 100%;
+const Container = styled(motion.div)`
+  width: 70%;
   padding: 30px 50px;
   background-color: #eee;
 
   position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
 
   display: flex;
   flex-direction: column;
@@ -61,6 +59,7 @@ const Title = styled.div`
 
 const ContentWrapper = styled.div`
   width: 100%;
+  height: 100%;
   margin-top: 20px;
   border: 1px solid #ddd;
 
@@ -72,15 +71,29 @@ const ContentWrapper = styled.div`
   }
 `;
 
-
-
 const WorkdetailView = ({ toggleModal, work }) => {
+  const containerVariant = {
+    start: {
+      scale: 0,
+      opacity: 0,
+    },
+    end: {
+      scale: 1,
+      opacity: 1,
+    },
+  };
   return (
-    <Container>
+    <Container variants={containerVariant} initial="start" animate="end">
       <GrClose className="closeBtn" onClick={(e) => toggleModal(e)} />
       <Title>
-        <h1>{work.title}<FiExternalLink className="linkBtn" /></h1>
-        <span>Figma<PiFigmaLogo className="figmaicon" /></span>
+        <h1>
+          {work.title}
+          <FiExternalLink className="linkBtn" />
+        </h1>
+        <span>
+          Figma
+          <PiFigmaLogo className="figmaicon" />
+        </span>
       </Title>
       <ContentWrapper>
         <div>산후조리원 산모들을 위한 웹 / 모바일 사이트</div>

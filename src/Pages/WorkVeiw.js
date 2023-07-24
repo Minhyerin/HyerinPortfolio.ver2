@@ -1,26 +1,7 @@
 import React, { useState } from "react";
 import { styled } from "styled-components";
-import { keyframes } from "styled-components";
 import WorkdetailView from "../Components/WorkdetailView";
-
-const lineAnimation = keyframes`
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-`;
-const TextAnimation = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   width: 100%;
@@ -39,7 +20,7 @@ const ContentWrapper = styled.div`
   width: 70%;
 `;
 
-const Topdiv = styled.div`
+const Topdiv = styled(motion.div)`
   width: 100%;
   height: 70px;
   padding: 0 3px;
@@ -48,14 +29,13 @@ const Topdiv = styled.div`
   justify-content: space-between;
 `;
 
-const UnderLine = styled.div`
+const UnderLine = styled(motion.div)`
   width: 0;
   height: 2px;
   background-color: #333;
-  animation: ${lineAnimation} 1.3s linear forwards;
 `;
 
-const TopUnderdiv = styled.div`
+const TopUnderdiv = styled(motion.div)`
   width: 100%;
   height: 70px;
   padding: 0 3px;
@@ -64,49 +44,31 @@ const TopUnderdiv = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-const TitleCol = styled.div`
-  width: 400px;
+const TitleCol = styled(motion.div)`
+  width: 450px;
   over-flow: hidden;
   h1 {
     display: block;
     font-size: 24px;
-    animation: ${TextAnimation} 0.8s linear forwards;
   }
-  p {
-    animation: ${TextAnimation} 0.8s linear forwards;
-    &.p4 {
-      animation: ${TextAnimation} 0.8s 0.25s linear forwards;
-    }
   }
 `;
-const RoleCol = styled.div`
+const RoleCol = styled(motion.div)`
   width: 350px;
   p.p1 {
     font-size: 16px;
-    animation: ${TextAnimation} 0.8s 0.1s linear forwards;
-  }
-  p.p5 {
-    animation: ${TextAnimation} 0.8s 0.3s linear forwards;
   }
 `;
-const TechCol = styled.div`
+const TechCol = styled(motion.div)`
   width: 200px;
   p.p2 {
     font-size: 16px;
-    animation: ${TextAnimation} 0.8s 0.15s linear forwards;
-  }
-  p.p6 {
-    animation: ${TextAnimation} 0.8s 0.35s linear forwards;
   }
 `;
-const DateCol = styled.div`
+const DateCol = styled(motion.div)`
   width: 100px;
   p.p3 {
     font-size: 16px;
-    animation: ${TextAnimation} 0.8s 0.2s linear forwards;
-  }
-  p.p7 {
-    animation: ${TextAnimation} 0.8s 0.4s linear forwards;
   }
 `;
 
@@ -117,25 +79,27 @@ const Bottomdiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
 `;
 const ImgBox = styled.div`
-  width: 400px;
+  width: 500px;
   height: 100%;
-  border-readius: 10px;
-  border: 1px solid #eee;
+  margin-right: 10px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
-const InfoBox = styled.div`
+const InfoBox = styled(motion.div)`
   width: 750px;
   height: 100%;
-  border: 1px solid #eee;
 
   display: flex;
   flex-direction: column;
   algin-items: center;
 `;
 
-const InfoCol = styled.div`
+const InfoCol = styled(motion.div)`
   padding: 0 6px;
   word-break: keep-all;
   font-size: 16px;
@@ -166,24 +130,66 @@ export const WorkVeiw = ({ work }) => {
     setModal(!isModal);
     console.log(isModal);
   };
+  const TopVariant = {
+    start: {
+      opacity: 0,
+    },
+    end: {
+      opacity: 1,
+      transition: {
+        durtaion: 1,
+        delayChildren: 0.3,
+        staggerChildren: 0.4,
+      },
+    },
+  };
+  const textVariant = {
+    start: {
+      opacity: 0,
+      y: 20,
+    },
+    end: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        durtaion: 2,
+      },
+    },
+  };
+
+  const lineVariant = {
+    start: {
+      width: 0,
+    },
+    end: {
+      width: "100%",
+      transition: {
+        duration: 2.5,
+      },
+    },
+  };
   return (
     <Container>
       <ContentWrapper>
-        <Topdiv>
-          <TitleCol>
+        <Topdiv variants={TopVariant} initial="start" animate="end">
+          <TitleCol variants={textVariant}>
             <h1>{work.title}</h1>
           </TitleCol>
-          <RoleCol>
+          <RoleCol variants={textVariant}>
             <p className="p1">ROLE</p>
           </RoleCol>
-          <TechCol>
+          <TechCol variants={textVariant}>
             <p className="p2">TECH</p>
           </TechCol>
-          <DateCol>
+          <DateCol variants={textVariant}>
             <p className="p3">Date</p>
           </DateCol>
         </Topdiv>
-        <UnderLine></UnderLine>
+        <UnderLine
+          variants={lineVariant}
+          initial="start"
+          animate="end"
+        ></UnderLine>
         <TopUnderdiv>
           <TitleCol>
             <p className="p4">{work.subtitle}</p>
@@ -200,13 +206,13 @@ export const WorkVeiw = ({ work }) => {
         </TopUnderdiv>
         <Bottomdiv>
           <ImgBox>
-            <img />
+            <img src={work.src} />
           </ImgBox>
-          <InfoBox>
-            <InfoCol>
+          <InfoBox variants={TopVariant} initial="start" animate="end">
+            <InfoCol variants={textVariant}>
               <p>INFO</p>
             </InfoCol>
-            <UnderLine />
+            <UnderLine variants={lineVariant} initial="start" animate="end" />
             <InfoCol>
               <p className="work">{work.info}</p>
             </InfoCol>
