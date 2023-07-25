@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { styled } from "styled-components";
 import { motion } from "framer-motion";
+import { Modal } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -10,6 +13,7 @@ const Container = styled.div`
   justify-content: center;
 `;
 const ContentWrapper = styled.div`
+  position; relative;
   width: 70%;
 `;
 const Topdiv = styled(motion.div)`
@@ -61,6 +65,11 @@ const Form = styled.form`
       outline: none;
       padding: 3px;
       background-color: transparent;
+      &:focus {
+        &::placeholder {
+          color: #eee;
+        }
+      }
     }
     textarea {
       width: 100%;
@@ -69,6 +78,11 @@ const Form = styled.form`
       outline: none;
       background-color: transparent;
       resize: none;
+      &:focus {
+        &::placeholder {
+          color: #eee;
+        }
+      }
     }
   }
   button {
@@ -90,7 +104,76 @@ const EmailBox = styled.div`
 const SocialBox = styled.div`
   flex: 1;
 `;
+const SendModal = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  border: 1px solid #333;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [modal, setModal] = useState(false);
+
+  const form = useRef();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
+
+  const toggleModal = (e) => {
+    e.preventDefault();
+    setModal(!modal);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (name === "") {
+      nameRef.current.focus();
+    } else if (email == "") {
+      emailRef.current.focus();
+    } else if (message == "") {
+      messageRef.current.focus();
+    } else {
+      emailjs
+        .sendForm(
+          "hyerin1201",
+          "template_qafjumn",
+          form.current,
+          "txyA1kU-qMzBEcQ9t"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      toggleModal(e);
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  };
+
+  const links = {
+    git: "",
+    blog: "",
+    kakao: "",
+  };
+
   const TopVariant = {
     start: {
       opacity: 0,
@@ -129,9 +212,7 @@ const Contact = () => {
       },
     },
   };
-  const handleOnSend = (e) => {
-    e.preventDefault();
-  };
+
   return (
     <Container>
       <ContentWrapper>
@@ -149,37 +230,67 @@ const Contact = () => {
         <UnderLine variants={lineVariant} initial="start" animate="end" />
         <Bottomdiv>
           <ContactBox>
-            <Form>
+            <Form ref={form} onSubmit={sendEmail}>
               <div>
                 <label for="name">
                   Name<em>*</em>
                 </label>
-                <input id="name" type={"text"} placeholder="name" />
+                <input
+                  ref={nameRef}
+                  name="user_name"
+                  id="name"
+                  type={"text"}
+                  placeholder="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
               </div>
               <div>
                 <label for="email">
                   Email<em>*</em>
                 </label>
-                <input id="email" type={"email"} placeholder="email" />
+                <input
+                  ref={emailRef}
+                  name="user_email"
+                  id="email"
+                  type={"email"}
+                  placeholder="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
               <div className="messageBox">
                 <label>
                   Message<em>*</em>
                 </label>
-                <textarea placeholder="message" />
+                <textarea
+                  ref={messageRef}
+                  name="message"
+                  placeholder="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
               </div>
-              <button onClick={(e) => handleOnSend(e)}>Send</button>
+              <button type="submit">Send</button>
             </Form>
           </ContactBox>
           <EmailBox>
-            <p>rin1401@naver.com</p>
+            <a href="mailto:minhyerin1201@gamil.com">minhyerin1201@gamil.com</a>
           </EmailBox>
           <SocialBox>
-            <p>Github</p>
-            <p>Blog</p>
-            <p>KakaoTalk</p>
+            <Link>Github</Link>
+            <Link>Blog</Link>
+            <Link>KakaoTalk</Link>
           </SocialBox>
         </Bottomdiv>
+        {modal ? (
+          <SendModal>
+            <span>전송이 완료되었습니다.</span>
+            <button onClick={(e) => toggleModal(e)}>close</button>
+          </SendModal>
+        ) : (
+          ""
+        )}
       </ContentWrapper>
     </Container>
   );
