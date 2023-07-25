@@ -1,5 +1,6 @@
 import mock1 from "../imgs/hugmom-mock1.png";
 import mock2 from "../imgs/hugmom-mock2.png";
+import mock3 from "../imgs/netfilx-mock.png";
 import thumb1 from "../imgs/thumb1.png";
 import thumb2 from "../imgs/thumb2.png";
 import thumb3 from "../imgs/thumb3.png";
@@ -30,7 +31,7 @@ export const WorkData = [
   {
     id: 3,
     thumb: thumb3,
-    src: "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_3.png",
+    src: mock3,
     title: "Netflix",
     subtitle: "Toy Project",
     role: "Design & Publishing",
