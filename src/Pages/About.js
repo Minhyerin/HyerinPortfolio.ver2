@@ -23,6 +23,7 @@ const Topdiv = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 `;
 const Title = styled(motion.div)`
   width: 400px;
@@ -63,12 +64,11 @@ const DescDiv = styled.div`
   width: 100%;
   height: 200px;
   display: flex;
+  gap: 20px;
 `;
 const Expriencebox = styled.div`
   flex: 1;
   height: 100%;
-  padding: 10px;
-  margin-right: 20px;
   div {
     margin-top: 10px;
     margin-bottom: 20px;

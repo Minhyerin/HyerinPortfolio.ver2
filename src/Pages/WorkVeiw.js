@@ -46,6 +46,7 @@ const TopUnderdiv = styled(motion.div)`
 `;
 const TitleCol = styled(motion.div)`
   width: 450px;
+  border: 1px solid #eee;
   over-flow: hidden;
   h1 {
     display: block;
@@ -54,7 +55,7 @@ const TitleCol = styled(motion.div)`
   }
 `;
 const RoleCol = styled(motion.div)`
-  width: 350px;
+  width: 250px;
   p.p1 {
     font-size: 16px;
   }
@@ -66,7 +67,7 @@ const TechCol = styled(motion.div)`
   }
 `;
 const DateCol = styled(motion.div)`
-  width: 100px;
+  width: 150px;
   p.p3 {
     font-size: 16px;
   }
@@ -81,7 +82,8 @@ const Bottomdiv = styled.div`
   justify-content: space-between;
 `;
 const ImgBox = styled.div`
-  width: 500px;
+  width: 450px;
+  border: 1px solid #eee;
   height: 100%;
   margin-right: 10px;
   img {
@@ -91,9 +93,8 @@ const ImgBox = styled.div`
   }
 `;
 const InfoBox = styled(motion.div)`
-  width: 750px;
+  width: 60%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   algin-items: center;

@@ -1,6 +1,8 @@
 import mock1 from "../imgs/hugmom-mock1.png";
 import mock2 from "../imgs/hugmom-mock2.png";
-import thumb1 from "../imgs/thumb1.jpg";
+import thumb1 from "../imgs/thumb1.png";
+import thumb2 from "../imgs/thumb2.png";
+import thumb3 from "../imgs/thumb3.png";
 
 export const WorkData = [
   {
@@ -16,10 +18,9 @@ export const WorkData = [
   },
   {
     id: 2,
-    thumb:
-      "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_1.png",
+    thumb: thumb2,
     src: mock2,
-    title: "React Shoppingmall",
+    title: "Hugmom React.ver",
     subtitle: "Hugmom 사이트를 React로 재구성",
     role: "Design & Publishing",
     tech: "React / Redux / Styled-component ",
@@ -28,8 +29,7 @@ export const WorkData = [
   },
   {
     id: 3,
-    thumb:
-      "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_3.png",
+    thumb: thumb3,
     src: "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_3.png",
     title: "Netflix",
     subtitle: "Toy Project",
