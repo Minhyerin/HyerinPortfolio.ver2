@@ -100,9 +100,18 @@ const Form = styled.form`
 `;
 const EmailBox = styled.div`
   flex: 1;
+  a {
+    display: inline-block;
+    margin: 10px 0;
+  }
 `;
 const SocialBox = styled.div`
   flex: 1;
+  a {
+    display: inline-block;
+    margin: 10px 0;
+    margin-right: 10px;
+  }
 `;
 const SendModal = styled.div`
   position: absolute;
@@ -112,12 +121,25 @@ const SendModal = styled.div`
   width: 300px;
   height: 200px;
   border: 1px solid #333;
+  border-radius: 10px;
   background-color: #fff;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 30px;
+  span {
+    text-align: center;
+  }
+  button {
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
 `;
 
 const Contact = () => {
@@ -285,8 +307,12 @@ const Contact = () => {
         </Bottomdiv>
         {modal ? (
           <SendModal>
-            <span>전송이 완료되었습니다.</span>
-            <button onClick={(e) => toggleModal(e)}>close</button>
+            <span>
+              전송이 완료되었습니다.
+              <br />
+              확인 후 연락드리겠습니다.
+            </span>
+            <button onClick={(e) => toggleModal(e)}>확인</button>
           </SendModal>
         ) : (
           ""

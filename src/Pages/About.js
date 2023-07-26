@@ -16,7 +16,7 @@ const ContentWrapper = styled.div`
 `;
 const AboutBox = styled.div`
   width: 100%;
-`
+`;
 const Topdiv = styled(motion.div)`
   width: 100%;
   padding: 0 3px;
@@ -34,13 +34,13 @@ const Title = styled(motion.div)`
     font-size: 24px;
   }
 }
-`
+`;
 const Socialbtn = styled(motion.div)`
   margin-left: 20px;
   p {
     font-size: 16px;
   }
-`
+`;
 const UnderLine = styled(motion.div)`
   width: 0;
   height: 2px;
@@ -53,13 +53,13 @@ const TopUnderdiv = styled(motion.div)`
 `;
 const AboutInfo = styled.div`
   width: 100%;
-`
+`;
 const SubTitle = styled(motion.div)`
   flex: 1;
   p {
     font-size: 16px;
   }
-`
+`;
 const DescDiv = styled.div`
   width: 100%;
   height: 200px;
@@ -70,10 +70,12 @@ const Expriencebox = styled.div`
   flex: 1;
   height: 100%;
   div {
-    margin-top: 10px;
-    margin-bottom: 20px;
     display: flex;
-    span{ 
+    align-items: center;
+    border-bottom: 1px solid #333;
+    margin: 10px 0;
+    padding: 10px 0;
+    span {
       flex: 1;
       word-break: keep-all;
     }
@@ -147,63 +149,78 @@ const About = () => {
     },
   };
   return (
-  <Container>
-    <ContentWrapper>
-      <AboutBox>
-        <Topdiv variants={TopVariant} initial="start" animate="end">
-          <Title variants={textVariant}>
-            <h1>ABOUT</h1>
-          </Title>
-          <Socialbtn variants={textVariant}>
-            <p>Github</p>
-          </Socialbtn>
-          <Socialbtn variants={textVariant}>
-            <p>Blog</p>
-          </Socialbtn>
-        </Topdiv>
-        <UnderLine variants={lineVariant} initial="start" animate="end" />
-        <TopUnderdiv>
-          <p>안녕하세요! 성실함으로 프론트엔드 개발자를 희망하는 민혜린입니다. 
-  저는 시각디자인 전공으로 좋은 ui/ux 를 제공하는것에 흥미를 느끼고, 사용자에게 멋진 경험을 선사하는 데에 열정을 가지고 있습니다!
-  좋은 웹사이트는 기업을 인식하는 방식 중 카장 큰 부분을 차지 할 수 있다고 생각합니다. 멋진 경험을 함께 하고 싶습니다!</p>
-        </TopUnderdiv>
-      </AboutBox>
-      <AboutInfo>
-        <Topdiv ariants={TopVariant} initial="start" animate="end">
-          <SubTitle variants={subtextVariant}>
-            <p>EXPERIENCE</p>
-          </SubTitle>
-          <SubTitle variants={subtextVariant}>
-            <p>SKILLS</p>
-          </SubTitle>
-        </Topdiv>
-        <UnderLine variants={lineVariant} initial="start" animate="end" />
-        <DescDiv>
-          <Expriencebox>
-            <div>
-              <span>그린컴퓨터아트학원<br/>2023.02-2023.08</span>
-              <span>웹퍼블리셔&리엑트 활용 프론트엔드 웹SW 개발자 과정 수료</span>
-            </div>
-            <UnderLine variants={lineVariant} initial="start" animate="end" />
-            <div>
-              <span>엘코잉크 코리아<br />2019.01-2023.02</span>
-              <span>신라면세점 바비브라운 매장 근무 고객응대 및 매장 관리</span>
-            </div>
-            <UnderLine variants={lineVariant} initial="start" animate="end" />
-          </Expriencebox>
-          <Skillbox>
-            <div>
-              <span>HTML / CSS</span>
-              <span>JavaScript</span>
-              <span>React / Redux</span>
-              <span>PhotoShop</span>
-              <span>Illustrator</span>
-            </div>
-          </Skillbox>
-        </DescDiv>
-      </AboutInfo>
-    </ContentWrapper>
-  </Container>
+    <Container>
+      <ContentWrapper>
+        <AboutBox>
+          <Topdiv variants={TopVariant} initial="start" animate="end">
+            <Title variants={textVariant}>
+              <h1>ABOUT</h1>
+            </Title>
+            <Socialbtn variants={textVariant}>
+              <p>Github</p>
+            </Socialbtn>
+            <Socialbtn variants={textVariant}>
+              <p>Blog</p>
+            </Socialbtn>
+          </Topdiv>
+          <UnderLine variants={lineVariant} initial="start" animate="end" />
+          <TopUnderdiv>
+            <p>
+              안녕하세요! 성실함으로 프론트엔드 개발자를 희망하는 민혜린입니다.
+              저는 시각디자인 전공으로 좋은 ui/ux 를 제공하는것에 흥미를 느끼고,
+              사용자에게 멋진 경험을 선사하는 데에 열정을 가지고 있습니다! 좋은
+              웹사이트는 기업을 인식하는 방식 중 카장 큰 부분을 차지 할 수
+              있다고 생각합니다. 멋진 경험을 함께 하고 싶습니다!
+            </p>
+          </TopUnderdiv>
+        </AboutBox>
+        <AboutInfo>
+          <Topdiv ariants={TopVariant} initial="start" animate="end">
+            <SubTitle variants={subtextVariant}>
+              <p>EXPERIENCE</p>
+            </SubTitle>
+            <SubTitle variants={subtextVariant}>
+              <p>SKILLS</p>
+            </SubTitle>
+          </Topdiv>
+          <UnderLine variants={lineVariant} initial="start" animate="end" />
+          <DescDiv>
+            <Expriencebox>
+              <div>
+                <span>
+                  그린컴퓨터아트학원
+                  <br />
+                  2023.02-2023.08
+                </span>
+                <span>
+                  웹퍼블리셔&리엑트 활용 프론트엔드 웹SW 개발자 과정 수료
+                </span>
+              </div>
+
+              <div>
+                <span>
+                  엘코잉크 코리아
+                  <br />
+                  2019.01-2023.02
+                </span>
+                <span>
+                  신라면세점 바비브라운 매장 근무 고객응대 및 매장 관리
+                </span>
+              </div>
+            </Expriencebox>
+            <Skillbox>
+              <div>
+                <span>HTML / CSS</span>
+                <span>JavaScript</span>
+                <span>React / Redux</span>
+                <span>PhotoShop</span>
+                <span>Illustrator</span>
+              </div>
+            </Skillbox>
+          </DescDiv>
+        </AboutInfo>
+      </ContentWrapper>
+    </Container>
   );
 };
 
