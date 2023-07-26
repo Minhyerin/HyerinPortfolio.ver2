@@ -9,7 +9,8 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Container = styled(motion.div)`
-  width: 70%;
+  width: 80%;
+  height: 100%;
   padding: 30px 50px;
   background-color: #eee;
 

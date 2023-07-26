@@ -46,7 +46,6 @@ const TopUnderdiv = styled(motion.div)`
 `;
 const TitleCol = styled(motion.div)`
   width: 450px;
-  border: 1px solid #eee;
   over-flow: hidden;
   h1 {
     display: block;
@@ -83,7 +82,6 @@ const Bottomdiv = styled.div`
 `;
 const ImgBox = styled.div`
   width: 450px;
-  border: 1px solid #eee;
   height: 100%;
   margin-right: 10px;
   img {
