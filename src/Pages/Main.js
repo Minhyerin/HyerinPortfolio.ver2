@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { styled } from "styled-components";
 import { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 
 const animation = keyframes`
   0% {
@@ -23,7 +24,7 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
 `;
-const TitleOne = styled.div`
+const TitleOne = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,6 +68,14 @@ const TitleOne = styled.div`
     }
   }
 `;
+const SpanWrapper = styled(motion.span)`
+  padding: 0.3rem 0;
+  overflow: hidden;
+  font-size: 60px;
+`;
+const SpanText = styled(motion.span)`
+  display: block;
+`;
 const TitleTwo = styled.div`
   display: flex;
   align-items: center;
@@ -77,48 +86,57 @@ const TitleTwo = styled.div`
     animation: ${animation} 0.1s linear forwards;
   }
 `;
+const titleVariant = {
+  start: {
+    opacity: 0,
+  },
+  end: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.5,
+      staggerChildren: 0.5,
+    },
+  },
+};
+const textVariant = {
+  start: {
+    opacity: 0,
+    y: 20,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 400,
+    },
+  },
+  end: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 400,
+    },
+  },
+};
+
 const Main = () => {
-  // const [landingTitle, setLandingTitle] = useState("");
-  // const [count, setCount] = useState(0); //문자열 인덱스
-  // useInterval(() => {
-  //   // 만약, count가 completedTitle의 길이와 같거나 커지면 반복을 멈춘다.
-  //   if (count >= completedTitle.length) {
-  //     return;
-  //   }
-
-  //   setLandingTitle((prev) => {
-  //     // 빈 문자열("")은 false이므로 completedTitle의 가장 앞 글자가 result에 할당된다.
-  //     // 그 뒤로는 landingTitle이 빈 문자열이 아니므로
-  //     // 이전에 존재하던 것과 count번 인덱스에 존재하는 문자열을 합쳐서
-  //     // 다시 result에 할당한다.
-  //     let result = prev ? prev + completedTitle[count] : completedTitle[0];
-
-  //     // count를 증가시킨다.
-  //     setCount((prev) => prev + 1);
-
-  //     // 연산된 result를 반환한다.
-  //     return result;
-  //   });
-
-  //   // 150ms에 한번씩 연산이 진행된다.
-  //   // 즉, 150ms에 한번씩 문자열이 늘어난다.(타이핑 효과)
-  // }, 150);
-
-  // const completedTitle = useMemo(() => {
-  //   return "Developer";
-  // }, []);
   const title1 = "Front Dev";
   const [titleText, setTitleText] = useState([]);
   useEffect(() => {
     setTitleText(title1.split(""));
   }, [title1]);
+
   return (
     <Container>
       <TitleOne>
         {titleText.map((t) => (
-          <span>
-            <span className={t}>{t}</span>
-          </span>
+          <SpanWrapper
+            variants={titleVariant}
+            initial="start"
+            whileInView="end"
+          >
+            <SpanText variants={textVariant}>{t}</SpanText>
+          </SpanWrapper>
         ))}
       </TitleOne>
       <TitleTwo></TitleTwo>

@@ -1,9 +1,9 @@
 import React from "react";
 import { styled } from "styled-components";
-import { useNavigate } from "react-router-dom";
-import WorkItem from "../Components/WorkItem";
-import { WorkData } from "../data/workdata";
 import { motion } from "framer-motion";
+
+import { WorkData } from "../data/workdata";
+import WorkItem from "../Components/WorkItem";
 
 const Container = styled(motion.div)`
   width: 100%;

@@ -65,6 +65,9 @@ const Form = styled.form`
       outline: none;
       padding: 3px;
       background-color: transparent;
+      &::placeholder {
+        transition: 0.3s;
+      }
       &:focus {
         &::placeholder {
           color: #eee;
@@ -78,6 +81,9 @@ const Form = styled.form`
       outline: none;
       background-color: transparent;
       resize: none;
+      &::placeholder {
+        transition: 0.3s;
+      }
       &:focus {
         &::placeholder {
           color: #eee;
@@ -297,7 +303,7 @@ const Contact = () => {
             </Form>
           </ContactBox>
           <EmailBox>
-            <a href="mailto:minhyerin1201@gamil.com">minhyerin1201@gamil.com</a>
+            <a href="mailto:minhyerin1201@gamil.com">minhyerin1201@gmail.com</a>
           </EmailBox>
           <SocialBox>
             <Link>Github</Link>

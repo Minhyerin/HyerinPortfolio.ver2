@@ -32,7 +32,7 @@ const Ul = styled.ul`
   }
 `;
 
-const menulist = ["Home", "Work", "About", "Resume"];
+const menulist = ["Home", "Work", "About", "Contact"];
 const Navbar = () => {
   const activeStyle = {
     color: "#fff",

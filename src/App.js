@@ -8,7 +8,6 @@ import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
 import About from "./Pages/About";
 import Work from "./Pages/Work";
-import Resume from "./Pages/Resume";
 import Contact from "./Pages/Contact";
 import { WorkData } from "./data/workdata";
 
@@ -86,7 +85,6 @@ function App() {
           <Route path={`/work/${it.id}`} element={<WorkVeiw work={it} />} />
         ))}
         <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Navbar />
