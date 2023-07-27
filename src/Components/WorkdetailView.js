@@ -1,37 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { motion } from "framer-motion";
+
 import { GrClose } from "react-icons/gr";
 import { FiExternalLink } from "react-icons/fi";
 import { PiFigmaLogo } from "react-icons/pi";
-import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const Container = styled(motion.div)`
-  width: 80%;
+  width: 100%;
   height: 100%;
+  overflow: scroll;
   padding: 30px 50px;
   background-color: #eee;
 
   position: absolute;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  top: 0;
+  left: 0;
 
   .closeBtn {
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     font-size: 22px;
   }
 `;
+const InnerWrapper = styled.div`
+  width: 100%;
+  border: 1px solid blue;
+  position: relative;
+
+
+`
 
 const Title = styled.div`
   width: 100%;
+  border: 1px solid tomato;
+  height: 50px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,14 +68,14 @@ const Title = styled.div`
 
 const ContentWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
   border: 1px solid #ddd;
-
   display: flex;
   flex-direction: column;
-  .box {
-    width: 100%;
+  div {
+    height: 500px;
+  }
+  img {
     height: 500px;
   }
 `;
@@ -86,6 +93,8 @@ const WorkdetailView = ({ toggleModal, work }) => {
   };
   return (
     <Container variants={containerVariant} initial="start" animate="end">
+      <InnerWrapper>
+
       <GrClose className="closeBtn" onClick={(e) => toggleModal(e)} />
       <Title>
         <h1>
@@ -101,15 +110,11 @@ const WorkdetailView = ({ toggleModal, work }) => {
       </Title>
       <ContentWrapper>
         <div>{work.subtitle}</div>
-        <Carousel>
-          <Paper>
-            <div className="box">1</div>
-          </Paper>
-          <Paper>
-            <div className="box">2</div>
-          </Paper>
-        </Carousel>
+        <img />
+        <img />
+        <img />
       </ContentWrapper>
+      </InnerWrapper>
     </Container>
   );
 };

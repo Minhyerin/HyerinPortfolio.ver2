@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { styled } from "styled-components";
 import WorkdetailView from "../Components/WorkdetailView";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -13,7 +14,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  position: relative;
 `;
 
 const ContentWrapper = styled.div`
@@ -111,6 +111,16 @@ const Buttons = styled.div`
   display: flex;
   margin-left: 10px;
   gap: 30px;
+  a {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #333;
+    color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
+  }
   button {
     padding: 10px;
     border: none;
@@ -118,6 +128,7 @@ const Buttons = styled.div`
     background-color: #333;
     color: #fff;
     font-weight: normal;
+    font-size: 14px;
     cursor: pointer;
   }
 `;
@@ -217,7 +228,7 @@ export const WorkVeiw = ({ work }) => {
             </InfoCol>
             <Buttons>
               <button onClick={(e) => toggleModal(e)}>View Detail</button>
-              <button>View Website</button>
+              <Link target={"_blank"} to={work.link}>View Website</Link>
             </Buttons>
           </InfoBox>
         </Bottomdiv>

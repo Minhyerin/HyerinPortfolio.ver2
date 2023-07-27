@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { styled } from "styled-components";
 import { keyframes } from "styled-components";
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 
 const animation = keyframes`
   0% {
@@ -93,28 +93,21 @@ const titleVariant = {
   end: {
     opacity: 1,
     transition: {
-      delayChildren: 0.5,
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
 };
 const textVariant = {
   start: {
     opacity: 0,
-    y: 20,
+    y: 30,
     transition: {
-      type: "spring",
-      damping: 15,
-      stiffness: 400,
     },
   },
   end: {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
-      damping: 15,
-      stiffness: 400,
     },
   },
 };
@@ -122,21 +115,21 @@ const textVariant = {
 const Main = () => {
   const title1 = "Front Dev";
   const [titleText, setTitleText] = useState([]);
+  const controls = useAnimationControls();
   useEffect(() => {
     setTitleText(title1.split(""));
-  }, [title1]);
+  })
+  useEffect(() => {
+    controls.start("show");
+  }, [titleText, controls]);
 
   return (
     <Container>
-      <TitleOne>
-        {titleText.map((t) => (
-          <SpanWrapper
-            variants={titleVariant}
+      <TitleOne variants={titleVariant}
             initial="start"
-            whileInView="end"
-          >
+            whileInView="end">
+        {titleText.map((t) => (
             <SpanText variants={textVariant}>{t}</SpanText>
-          </SpanWrapper>
         ))}
       </TitleOne>
       <TitleTwo></TitleTwo>
