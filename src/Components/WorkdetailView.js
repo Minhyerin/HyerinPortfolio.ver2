@@ -22,21 +22,17 @@ const Container = styled(motion.div)`
     cursor: pointer;
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 30px;
     font-size: 22px;
   }
 `;
 const InnerWrapper = styled.div`
   width: 100%;
-  border: 1px solid blue;
   position: relative;
-
-
-`
+`;
 
 const Title = styled.div`
   width: 100%;
-  border: 1px solid tomato;
   height: 50px;
 
   display: flex;
@@ -68,8 +64,7 @@ const Title = styled.div`
 
 const ContentWrapper = styled.div`
   width: 100%;
-  margin-top: 50px;
-  border: 1px solid #ddd;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   div {
@@ -94,26 +89,25 @@ const WorkdetailView = ({ toggleModal, work }) => {
   return (
     <Container variants={containerVariant} initial="start" animate="end">
       <InnerWrapper>
-
-      <GrClose className="closeBtn" onClick={(e) => toggleModal(e)} />
-      <Title>
-        <h1>
-          {work.title}
+        <GrClose className="closeBtn" onClick={(e) => toggleModal(e)} />
+        <Title>
+          <h1>
+            {work.title}
+            <Link target="blank" to={work.link}>
+              <FiExternalLink className="linkBtn" />
+            </Link>
+          </h1>
           <Link>
-            <FiExternalLink className="linkBtn" />
+            Figma
+            <PiFigmaLogo className="figmaicon" />
           </Link>
-        </h1>
-        <Link>
-          Figma
-          <PiFigmaLogo className="figmaicon" />
-        </Link>
-      </Title>
-      <ContentWrapper>
-        <div>{work.subtitle}</div>
-        <img />
-        <img />
-        <img />
-      </ContentWrapper>
+        </Title>
+        <ContentWrapper>
+          <div>{work.subtitle}</div>
+          <img />
+          <img />
+          <img />
+        </ContentWrapper>
       </InnerWrapper>
     </Container>
   );

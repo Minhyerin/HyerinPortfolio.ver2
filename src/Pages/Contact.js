@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { styled } from "styled-components";
 import { motion } from "framer-motion";
-import { Modal } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -106,16 +105,16 @@ const Form = styled.form`
 `;
 const EmailBox = styled.div`
   flex: 1;
+  margin: 20px 0;
   a {
     display: inline-block;
-    margin: 10px 0;
   }
 `;
 const SocialBox = styled.div`
   flex: 1;
+  margin: 20px 0;
   a {
     display: inline-block;
-    margin: 10px 0;
     margin-right: 10px;
   }
 `;

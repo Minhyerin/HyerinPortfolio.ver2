@@ -34,44 +34,7 @@ const TitleOne = styled(motion.div)`
     padding: 0.3rem 0;
     overflow: hidden;
     font-size: 60px;
-    .F {
-      display: block;
-      animation: ${animation} 0.6s 0.5s linear;
-    }
-    .r {
-      display: block;
-      animation: ${animation} 0.6s 0.52s linear;
-    }
-    .o {
-      display: block;
-      animation: ${animation} 0.6s 0.54s linear;
-    }
-    .n {
-      display: block;
-      animation: ${animation} 0.6s 0.56s linear forwards;
-    }
-    .t {
-      display: block;
-      animation: ${animation} 0.6s 0.58s linear forwards;
-    }
-    .D {
-      display: block;
-      animation: ${animation} 0.6s 0.6s linear forwards;
-    }
-    .e {
-      display: block;
-      animation: ${animation} 0.6s 0.62s linear forwards;
-    }
-    .v {
-      display: block;
-      animation: ${animation} 0.6s 0.58s linear forwards;
-    }
   }
-`;
-const SpanWrapper = styled(motion.span)`
-  padding: 0.3rem 0;
-  overflow: hidden;
-  font-size: 60px;
 `;
 const SpanText = styled(motion.span)`
   display: block;
@@ -101,35 +64,29 @@ const textVariant = {
   start: {
     opacity: 0,
     y: 30,
-    transition: {
-    },
+    transition: {},
   },
   end: {
     opacity: 1,
     y: 0,
-    transition: {
-    },
+    transition: {},
   },
 };
 
 const Main = () => {
-  const title1 = "Front Dev";
-  const [titleText, setTitleText] = useState([]);
+  const title = "Front Dev";
   const controls = useAnimationControls();
   useEffect(() => {
-    setTitleText(title1.split(""));
-  })
-  useEffect(() => {
     controls.start("show");
-  }, [titleText, controls]);
+  }, [controls]);
 
   return (
     <Container>
-      <TitleOne variants={titleVariant}
-            initial="start"
-            whileInView="end">
-        {titleText.map((t) => (
+      <TitleOne variants={titleVariant} initial="start" whileInView="end">
+        {Array.from(title).map((t) => (
+          <span>
             <SpanText variants={textVariant}>{t}</SpanText>
+          </span>
         ))}
       </TitleOne>
       <TitleTwo></TitleTwo>
