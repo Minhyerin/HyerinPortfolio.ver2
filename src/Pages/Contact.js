@@ -305,8 +305,8 @@ const Contact = () => {
             <a href="mailto:minhyerin1201@gamil.com">minhyerin1201@gmail.com</a>
           </EmailBox>
           <SocialBox>
-            <Link>Github</Link>
-            <Link>Blog</Link>
+            <Link to={"https://github.com/Minhyerin"} target="_blank">Github</Link>
+            <Link to={"https://hyerin1201.tistory.com/"} target="_blank">Blog</Link>
             <Link>KakaoTalk</Link>
           </SocialBox>
         </Bottomdiv>

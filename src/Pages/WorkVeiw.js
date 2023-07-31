@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  border: 1px solid #eee;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

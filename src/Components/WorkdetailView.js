@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { GrClose } from "react-icons/gr";
 import { FiExternalLink } from "react-icons/fi";
@@ -67,11 +67,13 @@ const ContentWrapper = styled.div`
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  div {
-    height: 500px;
-  }
+`;
+const Content = styled.div`
+  display: flex;
+  align-items: center;
   img {
-    height: 500px;
+    width: 900px;
+    height: 
   }
 `;
 
@@ -97,16 +99,13 @@ const WorkdetailView = ({ toggleModal, work }) => {
               <FiExternalLink className="linkBtn" />
             </Link>
           </h1>
-          <Link>
+          {work.figma.length > 0 ? <Link to={work.figma} target="_blank">
             Figma
             <PiFigmaLogo className="figmaicon" />
-          </Link>
+          </Link> : "" }
+          
         </Title>
         <ContentWrapper>
-          <div>{work.subtitle}</div>
-          <img />
-          <img />
-          <img />
         </ContentWrapper>
       </InnerWrapper>
     </Container>

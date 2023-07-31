@@ -157,10 +157,10 @@ const About = () => {
               <h1>ABOUT</h1>
             </Title>
             <Socialbtn variants={textVariant}>
-              <p>Github</p>
+              <Link to={"https://github.com/Minhyerin"} target="_blank">Github</Link>
             </Socialbtn>
             <Socialbtn variants={textVariant}>
-              <p>Blog</p>
+              <Link to={"https://hyerin1201.tistory.com/"} target="_blank">Blog</Link>
             </Socialbtn>
           </Topdiv>
           <UnderLine variants={lineVariant} initial="start" animate="end" />
