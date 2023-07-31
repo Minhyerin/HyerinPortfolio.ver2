@@ -16,6 +16,7 @@ const ContentWrapper = styled.div`
 `;
 const AboutBox = styled.div`
   width: 100%;
+  margin-bottom: 30px;
 `;
 const Topdiv = styled(motion.div)`
   width: 100%;
@@ -166,11 +167,11 @@ const About = () => {
           <UnderLine variants={lineVariant} initial="start" animate="end" />
           <TopUnderdiv>
             <p>
-              안녕하세요! 성실함으로 프론트엔드 개발자를 희망하는 민혜린입니다.
+              안녕하세요! 프론트엔드 개발자를 희망하는 민혜린입니다. <br />
               저는 시각디자인 전공으로 좋은 ui/ux 를 제공하는것에 흥미를 느끼고,
               사용자에게 멋진 경험을 선사하는 데에 열정을 가지고 있습니다! 좋은
-              웹사이트는 기업을 인식하는 방식 중 카장 큰 부분을 차지 할 수
-              있다고 생각합니다. 멋진 경험을 함께 하고 싶습니다!
+              웹사이트는 기업을 인식하는 방식 중 가장 큰 부분을 차지 한다고 생각합니다.
+              멋진 경험을 함께 하며 성장해 나가고 싶습니다!
             </p>
           </TopUnderdiv>
         </AboutBox>

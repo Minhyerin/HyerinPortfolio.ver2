@@ -70,10 +70,11 @@ const ContentWrapper = styled.div`
 `;
 const Content = styled.div`
   display: flex;
-  align-items: center;
-  img {
-    width: 900px;
-    height: 
+  video {
+    width: 800px;
+  }
+  div {
+    width: 600px;
   }
 `;
 
@@ -106,6 +107,10 @@ const WorkdetailView = ({ toggleModal, work }) => {
           
         </Title>
         <ContentWrapper>
+          <Content>
+            <video src={work.imgs[1]} autoPlay loop/>
+            <div>{work.desc[0]}</div>
+          </Content>
         </ContentWrapper>
       </InnerWrapper>
     </Container>

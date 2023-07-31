@@ -2,12 +2,15 @@ import mock1 from "../imgs/hugmom-mock1.png";
 import mock2 from "../imgs/hugmom-mock2.png";
 import mock3 from "../imgs/netfilx-mock.png";
 import mock4 from "../imgs/todolist-mock.png";
+import mock5 from "../imgs/diary-mock.png";
 import thumb1 from "../imgs/thumb1.png";
 import thumb2 from "../imgs/thumb2.png";
 import thumb3 from "../imgs/thumb3.png";
 import thumb4 from "../imgs/thumb4.png";
+import thumb5 from "../imgs/thumb5.png";
 
 import hugmom1 from "../imgs/hugmom1.png";
+import hugmom2 from "../imgs/hugmom-video1.mp4";
 export const WorkData = [
   {
     id: 1,
@@ -17,12 +20,12 @@ export const WorkData = [
     title: "Hugmom",
     subtitle: "산후조리원 산모들을 위한 쇼핑몰 웹사이트 & 모바일",
     role: "Header & Footer / shoppingmall / Page Design & publishing",
-    tech: "Html / css / Vanila Javascript",
+    tech: "HTML / CSS / Vanila Javascript",
     date: "2023.05-2023.06",
     info: "산후조리원 산모들을 대상으로 한 쇼핑몰 웹 사이트로 저렴한 가격에 유기농 농산물 및 육아용품 및산모용품을 구매 할 수 있는 사이트를 기획, 제작하였습니다. 임산부 코드 인증을 받아 가입을 진행할 수 있고, 산후조리원과 연계를 맺어 바로 배송이 가능하고 산후조리원에서 받아 볼 수 있는 시스템을 기획 하였습니다.",
-    imgs: [hugmom1],
+    imgs: [hugmom1, hugmom2],
     figma: "https://www.figma.com/file/MlFIWC7zZybEYX1PbLOyME/GMA-%EB%8C%80%EB%8B%A8%ED%95%98%EC%A1%B0-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?type=design&node-id=1303%3A901&mode=design&t=pERbCveD0y0ORsRX-1",
-    desc: ["산후조리원 산모들을 대상으로 한 쇼핑몰 웹사이트로 PC와 모바일 사이트 두가지를 제작하였습니다."]
+    desc: ["산후조리원 산모들을 대상으로 한 쇼핑몰 웹사이트로 PC와 모바일 사이트 두가지를 제작하였습니다. 임산부 코드를 입력하여 가입 및 로그인이 가능하며, 산후조리원과 연계된 시스템으로 하루배송이 가능하고 산모들을 필요한 유기농식료품이나 용품들을 바로 받아 볼 수 있습니다. 또한 라이브 커머스 방송을 진행하여 더욱 저렴한 가격에 구입이 가능한 시스템을 기획하였습니다.", "HTML, CSS, Vanila Javascript 를 사용하였습니다."]
   },
   {
     id: 2,
@@ -68,9 +71,8 @@ export const WorkData = [
   },
   {
     id: 5,
-    thumb:
-      "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_5.png",
-    src: "https://hugmom-b6187.web.app/img/01-main_banner_slide_mobile_img_5.png",
+    thumb: thumb5,
+    src: mock5,
     link: "",
     title: "React Diary",
     subtitle: "React Toy Project Diary",
