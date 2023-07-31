@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, sync } from "framer-motion";
 
 import { GrClose } from "react-icons/gr";
 import { FiExternalLink } from "react-icons/fi";
@@ -63,18 +63,42 @@ const Title = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  width: 100%;
+  width: 1000px;
+  margin: 0 auto;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
+  span {
+    display: block;
+    font-size: 18px;
+    margin-left: 10px;
+    line-height: 1.5;
+  }
 `;
 const Content = styled.div`
-  display: flex;
-  video {
-    width: 800px;
+  margin-top: 20px;
+  img {
+    width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
-  div {
-    width: 600px;
+`;
+const VideoBox = styled.div`
+  width: 100%;
+  padding: 50px;
+  background-color: #fff;
+  video {
+    width: 100%;
+  }
+`;
+const InfoBox = styled.div`
+  margin-top: 20px;
+  h3 {
+    margin: 0;
+  }
+  span {
+    font-size: 16px;
+    line-height: 1.8;
+    word-break: keep-all;
+    border-bottom: 1px solid #ddd;
   }
 `;
 
@@ -100,16 +124,27 @@ const WorkdetailView = ({ toggleModal, work }) => {
               <FiExternalLink className="linkBtn" />
             </Link>
           </h1>
-          {work.figma.length > 0 ? <Link to={work.figma} target="_blank">
-            Figma
-            <PiFigmaLogo className="figmaicon" />
-          </Link> : "" }
-          
+          {work.figma.length > 0 ? (
+            <Link to={work.figma} target="_blank">
+              Figma
+              <PiFigmaLogo className="figmaicon" />
+            </Link>
+          ) : (
+            ""
+          )}
         </Title>
         <ContentWrapper>
+          {work.desc.map((it) => (
+            <span>{it}</span>
+          ))}
           <Content>
-            <video src={work.imgs[1]} autoPlay loop/>
-            <div>{work.desc[0]}</div>
+            <img src={work.imgs[0]} />
+            <VideoBox>
+              <video src={work.imgs[1]} autoPlay loop />
+            </VideoBox>
+            <InfoBox>
+              <span>{work.detail}</span>
+            </InfoBox>
           </Content>
         </ContentWrapper>
       </InnerWrapper>
