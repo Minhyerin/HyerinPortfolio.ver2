@@ -65,38 +65,46 @@ const Title = styled.div`
 const ContentWrapper = styled.div`
   width: 1000px;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 30px;
   span {
     display: block;
     font-size: 18px;
-    margin-left: 10px;
+    margin: 10px 0;
     line-height: 1.5;
+    word-break: keep-all;
   }
 `;
 const Content = styled.div`
   margin-top: 20px;
   img {
     width: 1000px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    height: 100%;
   }
+
 `;
 const VideoBox = styled.div`
   width: 100%;
   padding: 50px;
-  background-color: #fff;
+  background-color: #ddd;
+  text-align: center;
   video {
     width: 100%;
   }
+  img {
+    width: 250px;
+  }
 `;
 const InfoBox = styled.div`
-  margin-top: 20px;
+  margin-bottom: 80px;
+
   h3 {
     margin: 0;
   }
   span {
+    display: block;
     font-size: 16px;
     line-height: 1.8;
+    margin-top: 10px;
     word-break: keep-all;
     border-bottom: 1px solid #ddd;
   }
@@ -139,11 +147,27 @@ const WorkdetailView = ({ toggleModal, work }) => {
           ))}
           <Content>
             <img src={work.imgs[0]} />
+            <InfoBox>
+            <span>{work.detail[0]}</span>
+            </InfoBox>
             <VideoBox>
               <video src={work.imgs[1]} autoPlay loop />
             </VideoBox>
             <InfoBox>
-              <span>{work.detail}</span>
+              <span>{work.detail[1]}</span>
+              <span>{work.detail[2]}</span>
+            </InfoBox>
+            <VideoBox>
+              <video src={work.imgs[2]} autoPlay loop />
+            </VideoBox>
+            <InfoBox>
+              <span>{work.detail[3]}</span>
+            </InfoBox>
+            <VideoBox>
+              <img src={work.imgs[3]} />
+            </VideoBox>
+            <InfoBox>
+            <span>{work.detail[4]}</span>
             </InfoBox>
           </Content>
         </ContentWrapper>
