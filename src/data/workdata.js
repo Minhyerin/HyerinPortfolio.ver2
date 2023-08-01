@@ -3,11 +3,14 @@ import mock2 from "../imgs/hugmom-mock2.png";
 import mock3 from "../imgs/netfilx-mock.png";
 import mock4 from "../imgs/todolist-mock.png";
 import mock5 from "../imgs/diary-mock.png";
+import mock6 from "../imgs/mock6.png";
+
 import thumb1 from "../imgs/thumb1.png";
 import thumb2 from "../imgs/thumb2.png";
 import thumb3 from "../imgs/thumb3.png";
 import thumb4 from "../imgs/thumb4.png";
 import thumb5 from "../imgs/thumb5.png";
+import thumb6 from "../imgs/thumb6.png";
 
 import hugmom1 from "../imgs/hugmom1.png";
 import hugmom2 from "../imgs/hugmom-video1.mp4";
@@ -59,7 +62,7 @@ export const WorkData = [
     subtitle: "Hugmom 사이트를 React로 재구성",
     role: "Design & Publishing",
     tech: "React / Redux / Styled-component ",
-    date: "2023.06-2023.06",
+    date: "2023.06",
     info: "앞서 제작한 Hugmom 프로젝트를 리엑트를 사용하여 재구성 하였습니다. 리덕스를 활용하여 데이터 상태관리를 보다 효율적으로 사용하는 법을 익히고, netlify를 통해 배포하였습니다. JSON 파일을 가상 서버를 활용하여 데이터를 가져와 출력해 주도록 하였습니다.",
     imgs: [hugmom2_1, hugmom2_2, hugmom2_3, hugmom2_4],
     figma: "",
@@ -103,11 +106,11 @@ export const WorkData = [
     src: mock4,
     link: "https://hyerin-react-todolist.netlify.app",
     title: "React TodoList",
-    subtitle: "React Toy Project TodoList",
+    subtitle: "React TodoList",
     role: "Design & Publishing",
     tech: "React",
     date: "2023.07",
-    info: "리액트 토이프로젝트로 작업한 Todo List 입니다.  에 데이터를 저장하고 불러올 수 있습니다.",
+    info: "리액트 실습으로 진행한 간단한 Todo List 입니다.",
     imgs: [],
     figma: "",
     desc: [],
@@ -119,11 +122,11 @@ export const WorkData = [
     src: mock5,
     link: "https://hyerin-react-diary.netlify.app",
     title: "React Diary",
-    subtitle: "React Toy Project Diary",
+    subtitle: "React Diary",
     role: "Design & Publishing",
     tech: "React",
     date: "2023.07",
-    info: "리액트 토이프로젝트로 작업한 Dairy 입니다. 에 데이터를 저장하고 불러올 수 있습니다..",
+    info: "리액트 실습으로 진행한 간단한 Dairy 입니다.",
     imgs: [],
     figma: "",
     desc: [],
@@ -131,11 +134,11 @@ export const WorkData = [
   },
   {
     id: 6,
-    thumb: thumb5,
-    src: mock5,
+    thumb: thumb6,
+    src: mock6,
     link: "https://hyerin-portfolio-v1.netlify.app",
-    title: "React Diary",
-    subtitle: "React Toy Project Diary",
+    title: "Portfolio.ver1",
+    subtitle: "이전에 작업한 포트폴리오 사이트입니다.",
     role: "Design & Publishing",
     tech: "HTML / CSS / Javascript / jQuery",
     date: "2023.05",
