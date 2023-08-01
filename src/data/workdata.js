@@ -19,6 +19,10 @@ import hugmom2_2 from "../imgs/hugmom2-video1.mp4";
 import hugmom2_3 from "../imgs/hugmom2-video2.mp4";
 import hugmom2_4 from "../imgs/hugmom2-4.gif";
 
+import netflix1 from "../imgs/netflix1.png";
+import netflix2 from "../imgs/netflix-video1.mp4";
+import netflix3 from "../imgs/netflix-video2.mp4";
+
 export const WorkData = [
   {
     id: 1,
@@ -70,10 +74,10 @@ export const WorkData = [
     tech: "React / React middle ware thunk",
     date: "2023.07",
     info: "리엑트를 활용하여 넷플릭스 사이트를 만들어 보았습니다. 리덕스 미들웨어를 통해 데이터 상태관리 및 최적화하는 법에 대하여 익히고 netlify를 통해 배포하였습니다.",
-    imgs: [],
+    imgs: [netflix1, netflix2, netflix3],
     figma: "",
-    desc: [],
-    detail: [],
+    desc: ["리엑트를 활용한 넷플릭스 사이트 입니다. API를 사용하여 무비 데이터를 가져오고, 리덕스 미들웨어를 통해 데이터 상태관리 및 최적화 하는 법에 대해 익혔습니다. netlify를 통해 배포하였습니다."],
+    detail: ["헤더 부분 스타일은 부트스트랩 라이브러리를 사용하였고, 캐러셀은 multi-carousel 라이브러리를 사용하였습니다.", "영화의 데이터는 The Movie Database의 API를 사용하였습니다.", "영화를 클릭시 로그인 페이지로 연결 되며, 로그인을 통해 상세페이지를 확인 할 수 있습니다.", "Movies 메뉴에서는 영화 키워드를 검색할 수 있습니다. 키워드를 입력하고 search버튼을 클릭시 해당 영화를 찾아 출력해줍니다."],
   },
   {
     id: 4,

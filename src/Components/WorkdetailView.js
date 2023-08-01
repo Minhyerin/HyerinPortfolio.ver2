@@ -163,12 +163,15 @@ const WorkdetailView = ({ toggleModal, work }) => {
             <InfoBox>
               <span>{work.detail[3]}</span>
             </InfoBox>
-            <VideoBox>
+            {work.imgs[3] ? <>
+              <VideoBox>
               <img src={work.imgs[3]} />
             </VideoBox>
             <InfoBox>
             <span>{work.detail[4]}</span>
             </InfoBox>
+            </> : "" }
+            
           </Content>
         </ContentWrapper>
       </InnerWrapper>
