@@ -23,7 +23,7 @@ const Container = styled(motion.div)`
     position: absolute;
     left: 0;
     bottom: -100px;
-    padding:  0 20px;
+    padding: 0 20px;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     font-weight: bold;
@@ -34,6 +34,13 @@ const Container = styled(motion.div)`
     filter: brightness(1);
     div {
       bottom: 0;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: 45%;
+    height: 25%;
+    &: hover {
+      width: 45%;
     }
   }
 `;

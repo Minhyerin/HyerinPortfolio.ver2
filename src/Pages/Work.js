@@ -7,11 +7,15 @@ import WorkItem from "../Components/WorkItem";
 
 const Container = styled(motion.div)`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 `;
 
 const Work = () => {

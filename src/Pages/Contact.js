@@ -10,10 +10,16 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+  }
 `;
 const ContentWrapper = styled.div`
   position; relative;
   width: 70%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const Topdiv = styled(motion.div)`
   width: 100%;
@@ -34,6 +40,9 @@ const Title = styled(motion.div)`
 `;
 const SubTitle = styled(motion.div)`
   flex: 1;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+  }
 `;
 const UnderLine = styled(motion.div)`
   width: 0;
@@ -44,9 +53,15 @@ const UnderLine = styled(motion.div)`
 const Bottomdiv = styled.div`
   width: 100%;
   display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 const ContactBox = styled.div`
   flex: 2;
+  @media screen and (max-width: 768px) {
+    flex: 1;
+  }
 `;
 const Form = styled.form`
   div {
@@ -101,6 +116,16 @@ const Form = styled.form`
   div.messageBox {
     flex-direction: column;
     align-items: flex-start;
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+    button {
+      width: 100px;
+    }
   }
 `;
 const EmailBox = styled.div`
@@ -305,8 +330,12 @@ const Contact = () => {
             <a href="mailto:minhyerin1201@gamil.com">minhyerin1201@gmail.com</a>
           </EmailBox>
           <SocialBox>
-            <Link to={"https://github.com/Minhyerin"} target="_blank">Github</Link>
-            <Link to={"https://hyerin1201.tistory.com/"} target="_blank">Blog</Link>
+            <Link to={"https://github.com/Minhyerin"} target="_blank">
+              Github
+            </Link>
+            <Link to={"https://hyerin1201.tistory.com/"} target="_blank">
+              Blog
+            </Link>
             <Link>KakaoTalk</Link>
           </SocialBox>
         </Bottomdiv>

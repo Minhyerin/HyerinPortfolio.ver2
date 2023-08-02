@@ -9,12 +9,24 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+  }
 `;
 
 const ContentWrapper = styled.div`
   width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    gap: 30px;
+  }
 `;
 const AboutBox = styled.div`
+  border: 1px solid #eee;
   width: 100%;
   margin-bottom: 30px;
 `;
@@ -41,6 +53,7 @@ const Socialbtn = styled(motion.div)`
   p {
     font-size: 16px;
   }
+  }
 `;
 const UnderLine = styled(motion.div)`
   width: 0;
@@ -51,6 +64,10 @@ const TopUnderdiv = styled(motion.div)`
   width: 100%;
   height: 70px;
   padding: 0 3px;
+  @media screen and (max-width: 768px) {
+    p {
+      font-size: 14px;
+    }
 `;
 const AboutInfo = styled.div`
   width: 100%;
@@ -158,10 +175,14 @@ const About = () => {
               <h1>ABOUT</h1>
             </Title>
             <Socialbtn variants={textVariant}>
-              <Link to={"https://github.com/Minhyerin"} target="_blank">Github</Link>
+              <Link to={"https://github.com/Minhyerin"} target="_blank">
+                Github
+              </Link>
             </Socialbtn>
             <Socialbtn variants={textVariant}>
-              <Link to={"https://hyerin1201.tistory.com/"} target="_blank">Blog</Link>
+              <Link to={"https://hyerin1201.tistory.com/"} target="_blank">
+                Blog
+              </Link>
             </Socialbtn>
           </Topdiv>
           <UnderLine variants={lineVariant} initial="start" animate="end" />
@@ -170,8 +191,8 @@ const About = () => {
               안녕하세요! 프론트엔드 개발자를 희망하는 민혜린입니다. <br />
               저는 시각디자인 전공으로 좋은 ui/ux 를 제공하는것에 흥미를 느끼고,
               사용자에게 멋진 경험을 선사하는 데에 열정을 가지고 있습니다! 좋은
-              웹사이트는 기업을 인식하는 방식 중 가장 큰 부분을 차지 한다고 생각합니다.
-              멋진 경험을 함께 하며 성장해 나가고 싶습니다!
+              웹사이트는 기업을 인식하는 방식 중 가장 큰 부분을 차지 한다고
+              생각합니다. 멋진 경험을 함께 하며 성장해 나가고 싶습니다!
             </p>
           </TopUnderdiv>
         </AboutBox>

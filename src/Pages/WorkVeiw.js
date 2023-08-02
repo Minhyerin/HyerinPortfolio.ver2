@@ -12,10 +12,16 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+  }
 `;
 
 const ContentWrapper = styled.div`
   width: 70%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Topdiv = styled(motion.div)`
@@ -226,7 +232,9 @@ export const WorkVeiw = ({ work }) => {
             </InfoCol>
             <Buttons>
               <button onClick={(e) => toggleModal(e)}>View Detail</button>
-              <Link target={"_blank"} to={work.link}>View Website</Link>
+              <Link target={"_blank"} to={work.link}>
+                View Website
+              </Link>
             </Buttons>
           </InfoBox>
         </Bottomdiv>
