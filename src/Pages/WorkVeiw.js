@@ -13,6 +13,7 @@ const Container = styled.div`
   align-items: center;
 
   @media screen and (max-width: 768px) {
+    position: relative;
     height: 100vh;
   }
 `;
@@ -21,6 +22,8 @@ const ContentWrapper = styled.div`
   width: 70%;
   @media screen and (max-width: 768px) {
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -31,12 +34,24 @@ const Topdiv = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    border: 1px solid blue;
+    height: 280px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const UnderLine = styled(motion.div)`
   width: 0;
   height: 2px;
   background-color: #333;
+  @media screen and (max-width: 768px) {
+    &.top {
+      position: absolute;
+      top: 60px;
+    }
+  }
 `;
 
 const TopUnderdiv = styled(motion.div)`
@@ -47,6 +62,22 @@ const TopUnderdiv = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 230px;
+    border: 1px solid red;
+    position: absolute;
+    transform: translateY(60px);
+    div {
+      border: 1px solid #fff;
+      width: 100%;
+      p {
+        margin: 0;
+      }
+    }
+  }
 `;
 const TitleCol = styled(motion.div)`
   width: 450px;
@@ -199,7 +230,7 @@ export const WorkVeiw = ({ work }) => {
             <p className="p3">Date</p>
           </DateCol>
         </Topdiv>
-        <UnderLine
+        <UnderLine className="top"
           variants={lineVariant}
           initial="start"
           animate="end"

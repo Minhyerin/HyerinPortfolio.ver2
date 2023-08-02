@@ -26,6 +26,14 @@ import netflix1 from "../imgs/netflix1.png";
 import netflix2 from "../imgs/netflix-video1.mp4";
 import netflix3 from "../imgs/netflix-video2.mp4";
 
+import todolist1 from "../imgs/todolist1.png";
+import todolist2 from "../imgs/todolist-video1.mp4";
+import todolist3 from "../imgs/todolist-video2.mp4";
+
+import diary1 from "../imgs/diary1.png";
+import diary2 from "../imgs/diary-video1.mp4";
+import diary3 from "../imgs/diary-video2.mp4";
+
 export const WorkData = [
   {
     id: 1,
@@ -91,7 +99,7 @@ export const WorkData = [
     imgs: [netflix1, netflix2, netflix3],
     figma: "",
     desc: [
-      "리엑트를 활용한 넷플릭스 사이트 입니다. API를 사용하여 무비 데이터를 가져오고, 리덕스 미들웨어를 통해 데이터 상태관리 및 최적화 하는 법에 대해 익혔습니다. netlify를 통해 배포하였습니다.",
+      "리액트를 활용한 넷플릭스 사이트 입니다. API를 사용하여 무비 데이터를 가져오고, 리덕스 미들웨어를 통해 데이터 상태관리 및 최적화 하는 법에 대해 익혔습니다. netlify를 통해 배포하였습니다.",
     ],
     detail: [
       "헤더 부분 스타일은 부트스트랩 라이브러리를 사용하였고, 캐러셀은 multi-carousel 라이브러리를 사용하였습니다.",
@@ -111,10 +119,10 @@ export const WorkData = [
     tech: "React",
     date: "2023.07",
     info: "리액트 실습으로 진행한 간단한 Todo List 입니다.",
-    imgs: [],
+    imgs: [todolist1, todolist2, todolist3],
     figma: "",
-    desc: [],
-    detail: [],
+    desc: ["리액트 실습으로 진행한 간단한 Todo List 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고, useMemo 훅을 사용해 컴포넌트의 성능을 최적화시키는 방법에 대해 익혔습니다."],
+    detail: ["메모장의 느낌이 나도록 아기자기한 느낌으로 디자인 해보았습니다.", "먼저 예시로 목업 데이터의 할 일이 보여집니다.", "새로운 할 일을 입력하고, 완료시 체크 및 삭제 할 수 있습니다.", "키워드로 검색할시 할 일 목록에서 같은 키워드의 할 일을 찾을 수 있습니다."],
   },
   {
     id: 5,
@@ -127,9 +135,9 @@ export const WorkData = [
     tech: "React",
     date: "2023.07",
     info: "리액트 실습으로 진행한 간단한 Dairy 입니다.",
-    imgs: [],
+    imgs: [diary1, diary2, diary3],
     figma: "",
-    desc: [],
+    desc: ["리액트 실습으로 진행한 간단한 Dairy 입니다."],
     detail: [],
   },
 ];

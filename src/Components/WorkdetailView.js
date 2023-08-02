@@ -84,8 +84,8 @@ const Content = styled.div`
 `;
 const VideoBox = styled.div`
   width: 100%;
-  padding: 50px;
-  background-color: #ddd;
+  // padding: 30px;
+  // background-color: #ddd;
   text-align: center;
   video {
     width: 100%;
