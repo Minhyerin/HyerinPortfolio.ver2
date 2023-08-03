@@ -16,9 +16,11 @@ const Container = styled.div`
   height: 100vh;
   padding: 80px;
   background-color: #ddd;
+  position: relative;
 
   display: flex;
   flex-direction: column;
+  align-items: space-between;
 
   @media screen and (max-width: 768px) {
     width: 100vw;
