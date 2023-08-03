@@ -37,8 +37,10 @@ const Container = styled(motion.div)`
     }
   }
   @media screen and (max-width: 768px) {
-    width: 45%;
-    height: 28%;
+    //width: 45%;
+    width:20%;
+    //height: 28%;
+    height: 40%;
     &: hover {
       width: 45%;
     }

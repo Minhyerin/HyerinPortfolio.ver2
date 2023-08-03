@@ -122,8 +122,13 @@ const Form = styled.form`
     flex-direction: column;
     div {
       width: 100%;
+      margin: 0;
+      textarea {
+        height: 150px;
+      }
     }
     button {
+      margin-top: 10px;
       width: 100px;
     }
   }

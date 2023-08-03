@@ -22,10 +22,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100vh;
-  @media screen and (max-width: 768px) {
-    width: 100vw;
-  }
+  height: 100%;
 `;
 const TitleOne = styled(motion.div)`
   display: flex;
