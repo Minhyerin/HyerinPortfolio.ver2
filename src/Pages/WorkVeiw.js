@@ -35,8 +35,9 @@ const Topdiv = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    border: 1px solid blue;
-    height: 280px;
+    padding: 0;
+    //border: 1px solid blue;
+    height: 260px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -49,7 +50,7 @@ const UnderLine = styled(motion.div)`
   @media screen and (max-width: 768px) {
     &.top {
       position: absolute;
-      top: 60px;
+      top: 100px;
     }
   }
 `;
@@ -64,16 +65,19 @@ const TopUnderdiv = styled(motion.div)`
   justify-content: space-between;
 
   @media screen and (max-width: 768px) {
+    padding: 0 3px;
     flex-direction: column;
     align-items: flex-start;
-    height: 230px;
-    border: 1px solid red;
+    justify-content: space-between;
+    height: 200px;
+    //border: 1px solid red;
     position: absolute;
-    transform: translateY(60px);
+    transform: translateY(40px);
     div {
-      border: 1px solid #fff;
+      //border: 1px solid #fff;
       width: 100%;
       p {
+        font-size: 14px;
         margin: 0;
       }
     }
@@ -86,6 +90,15 @@ const TitleCol = styled(motion.div)`
     display: block;
     font-size: 24px;
   }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 20px;
+    h1 {
+      margin: 0;
+    }
+    p.p4 {
+      position: absolute;
+      top: 5px;
+    }
   }
 `;
 const RoleCol = styled(motion.div)`
@@ -93,17 +106,50 @@ const RoleCol = styled(motion.div)`
   p.p1 {
     font-size: 16px;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    p.p1 {
+      padding: 3px 0;
+      border-bottom: 1px solid #bbb;
+    }
+    p.p5 {
+      top: 70px;
+      position: absolute;
+    }
+  }
 `;
 const TechCol = styled(motion.div)`
   width: 200px;
   p.p2 {
     font-size: 16px;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    p.p2 {
+      padding: 3px 0;
+      border-bottom: 1px solid #bbb;
+    }
+    p.p6 {
+      top: 140px;
+      position: absolute;
+    }
+  }
 `;
 const DateCol = styled(motion.div)`
   width: 150px;
   p.p3 {
     font-size: 16px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    p.p3 {
+      padding: 3px 0;
+      border-bottom: 1px solid #bbb;
+    }
+    p.p7 {
+      top: 210px;
+      position: absolute;
+    }
   }
 `;
 
@@ -114,15 +160,23 @@ const Bottomdiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 240px;
+    // /border: 1px solid green;
+  }
 `;
 const ImgBox = styled.div`
-  width: 450px;
+  width: 400px;
   height: 100%;
   margin-right: 10px;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 `;
 const InfoBox = styled(motion.div)`
@@ -131,6 +185,12 @@ const InfoBox = styled(motion.div)`
   display: flex;
   flex-direction: column;
   algin-items: center;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    p {
+      font-size: 14px;
+    }
+  }
 `;
 
 const InfoCol = styled(motion.div)`
@@ -139,6 +199,9 @@ const InfoCol = styled(motion.div)`
   font-size: 16px;
   p.work {
     line-height: 1.4;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0;
   }
 `;
 
@@ -165,6 +228,9 @@ const Buttons = styled.div`
     font-weight: normal;
     font-size: 14px;
     cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
   }
 `;
 
@@ -230,7 +296,8 @@ export const WorkVeiw = ({ work }) => {
             <p className="p3">Date</p>
           </DateCol>
         </Topdiv>
-        <UnderLine className="top"
+        <UnderLine
+          className="top"
           variants={lineVariant}
           initial="start"
           animate="end"
