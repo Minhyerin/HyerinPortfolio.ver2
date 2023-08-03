@@ -91,7 +91,7 @@ export const WorkData = [
     src: mock3,
     link: "https://hyerin-react-netflix.netlify.app",
     title: "Netflix",
-    subtitle: "Toy Project",
+    subtitle: "React 를 활용한 Netflix 웹사이트",
     role: "Design & Publishing",
     tech: "React / React middle ware thunk",
     date: "2023.07",
