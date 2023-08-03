@@ -26,7 +26,6 @@ const ContentWrapper = styled.div`
   }
 `;
 const AboutBox = styled.div`
-  border: 1px solid #eee;
   width: 100%;
   margin-bottom: 30px;
 `;
@@ -52,7 +51,6 @@ const Socialbtn = styled(motion.div)`
   margin-left: 20px;
   p {
     font-size: 16px;
-  }
   }
 `;
 const UnderLine = styled(motion.div)`
@@ -96,6 +94,17 @@ const Expriencebox = styled.div`
     span {
       flex: 1;
       word-break: keep-all;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    div {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      span {
+        font-size: 14px;
+      }
     }
   }
 `;

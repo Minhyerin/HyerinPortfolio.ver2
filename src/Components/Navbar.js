@@ -23,11 +23,21 @@ const Ul = styled.ul`
     width: 100%;
     a {
       display: inline-block;
-      width: 90%;q
+      width: 90%;
       color: #333;
       padding: 3px 0;
       border-radius: 20px;
       transition: 0.4s;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 10px;
+    li {
+      a {
+        width: 100%;
+        font-size: 16px;
+      }
     }
   }
 `;

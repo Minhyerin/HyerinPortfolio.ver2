@@ -25,6 +25,18 @@ const Container = styled(motion.div)`
     right: 30px;
     font-size: 22px;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px 30px;
+    //border: 1px solid red;
+    top: -60px;
+    left: -20px;
+    .closeBtn {
+      top: 30px;
+    }
+  }
 `;
 const InnerWrapper = styled.div`
   width: 100%;
@@ -60,6 +72,9 @@ const Title = styled.div`
       margin-top: 3px;
     }
   }
+  @media screen and (max-width: 768px) {
+    padding: 10px 0;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -73,6 +88,13 @@ const ContentWrapper = styled.div`
     line-height: 1.5;
     word-break: keep-all;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 10px;
+    span {
+      font-size: 16px;
+    }
+  }
 `;
 const Content = styled.div`
   margin-top: 20px;
@@ -80,12 +102,15 @@ const Content = styled.div`
     width: 1000px;
     height: 100%;
   }
+  @media screen and (max-width: 768px) {
+    img {
+      width: 100%;
+    }
+  }
 
 `;
 const VideoBox = styled.div`
   width: 100%;
-  // padding: 30px;
-  // background-color: #ddd;
   text-align: center;
   video {
     width: 100%;
@@ -94,6 +119,7 @@ const VideoBox = styled.div`
     width: 250px;
   }
 `;
+
 const InfoBox = styled.div`
   margin-bottom: 80px;
 
@@ -107,6 +133,12 @@ const InfoBox = styled.div`
     margin-top: 10px;
     word-break: keep-all;
     border-bottom: 1px solid #ddd;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
+    span {
+      font-size: 14px;
+    }
   }
 `;
 

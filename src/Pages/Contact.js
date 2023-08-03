@@ -41,7 +41,7 @@ const Title = styled(motion.div)`
 const SubTitle = styled(motion.div)`
   flex: 1;
   @media screen and (max-width: 768px) {
-    position: absolute;
+    display: none;
   }
 `;
 const UnderLine = styled(motion.div)`
@@ -133,6 +133,10 @@ const EmailBox = styled.div`
   margin: 20px 0;
   a {
     display: inline-block;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    margin-top: 20px;
   }
 `;
 const SocialBox = styled.div`
