@@ -3,14 +3,12 @@ import mock2 from "../imgs/hugmom-mock2.png";
 import mock3 from "../imgs/netfilx-mock.png";
 import mock4 from "../imgs/todolist-mock.png";
 import mock5 from "../imgs/diary-mock.png";
-import mock6 from "../imgs/mock6.png";
 
 import thumb1 from "../imgs/thumb1.png";
 import thumb2 from "../imgs/thumb2.png";
 import thumb3 from "../imgs/thumb3.png";
 import thumb4 from "../imgs/thumb4.png";
 import thumb5 from "../imgs/thumb5.png";
-import thumb6 from "../imgs/thumb6.png";
 
 import hugmom1 from "../imgs/hugmom1.png";
 import hugmom2 from "../imgs/hugmom-video1.mp4";
@@ -42,7 +40,7 @@ export const WorkData = [
     link: "https://hugmom-b6187.web.app/html/01-intro.html",
     title: "Hugmom",
     subtitle: "산후조리원 산모들을 위한 쇼핑몰 웹사이트 & 모바일",
-    role: "Header & Footer / shoppingmall / Page Design & publishing",
+    role: "Design & publishing",
     tech: "HTML / CSS / Vanila Javascript",
     date: "2023.05-2023.06",
     info: "산후조리원 산모들을 대상으로 한 쇼핑몰 웹 사이트로 저렴한 가격에 유기농 농산물, 육아용품 및 산모용품을 구매 할 수 있는 사이트를 기획, 제작하였습니다. 임산부 코드 인증을 받아 가입을 진행할 수 있고, 산후조리원과 연계를 맺어 바로 배송이 가능하고 산후조리원에서 받아 볼 수 있는 시스템을 기획 하였습니다.",
@@ -114,15 +112,22 @@ export const WorkData = [
     src: mock4,
     link: "https://hyerin-react-todolist.netlify.app",
     title: "React TodoList",
-    subtitle: "React TodoList",
+    subtitle: "React를 활용한 TodoList",
     role: "Design & Publishing",
     tech: "React",
     date: "2023.07",
     info: "리액트 실습으로 진행한 간단한 Todo List 입니다.",
     imgs: [todolist1, todolist2, todolist3],
     figma: "",
-    desc: ["리액트 실습으로 진행한 간단한 Todo List 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고, useMemo 훅을 사용해 컴포넌트의 성능을 최적화시키는 방법에 대해 익혔습니다."],
-    detail: ["메모장의 느낌이 나도록 아기자기한 느낌으로 디자인 해보았습니다.", "먼저 예시로 목업 데이터의 할 일이 보여집니다.", "새로운 할 일을 입력하고, 완료시 체크 및 삭제 할 수 있습니다.", "키워드로 검색할시 할 일 목록에서 같은 키워드의 할 일을 찾을 수 있습니다."],
+    desc: [
+      "리액트 실습으로 진행한 간단한 Todo List 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고, useMemo 훅을 사용해 컴포넌트의 성능을 최적화시키는 방법에 대해 익혔습니다.",
+    ],
+    detail: [
+      "메모장의 느낌이 나도록 아기자기한 느낌으로 디자인 해보았습니다.",
+      "먼저 예시로 목업 데이터의 할 일이 보여집니다.",
+      "새로운 할 일을 입력하고, 완료시 체크 및 삭제 할 수 있습니다.",
+      "키워드로 검색할시 할 일 목록에서 같은 키워드의 할 일을 찾을 수 있습니다.",
+    ],
   },
   {
     id: 5,
@@ -130,7 +135,7 @@ export const WorkData = [
     src: mock5,
     link: "https://hyerin-react-diary.netlify.app",
     title: "React Diary",
-    subtitle: "React Diary",
+    subtitle: "React를 활용한 Diary",
     role: "Design & Publishing",
     tech: "React",
     date: "2023.07",
@@ -138,6 +143,11 @@ export const WorkData = [
     imgs: [diary1, diary2, diary3],
     figma: "",
     desc: ["리액트 실습으로 진행한 간단한 Dairy 입니다."],
-    detail: [],
+    detail: [
+      "작성자, 일기, 감정을 선택하여 입력하는 Diary 입니다.",
+      "각 항목을 입력하고 저장하기 버튼을 누르면 작성한 시간도 함께 일기 리스트에 출력됩니다.",
+      "만약 항목이 비어있거나 작성 되지 않았다면, 저장하기를 클릭시 해당 항목에 포커스 됩니다.",
+      "작성된 일기는 수정 및 삭제가 가능합니다.",
+    ],
   },
 ];

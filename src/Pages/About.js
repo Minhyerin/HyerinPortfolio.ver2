@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -122,6 +122,17 @@ const Skillbox = styled.div`
 `;
 
 const About = () => {
+  const containerVariant = {
+    start: {
+      opacity: 0,
+    },
+    end: {
+      opacity: 1,
+    },
+    out: {
+      opacity: 0,
+    },
+  };
   const TopVariant = {
     start: {
       opacity: 0,
@@ -176,7 +187,13 @@ const About = () => {
     },
   };
   return (
-    <Container>
+    <Container
+      variants={containerVariant}
+      initial="start"
+      animate="end"
+      exit="out"
+      transition={{ duration: 0.5 }}
+    >
       <ContentWrapper>
         <AboutBox>
           <Topdiv variants={TopVariant} initial="start" animate="end">

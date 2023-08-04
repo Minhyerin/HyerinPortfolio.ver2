@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { styled } from "styled-components";
 import { keyframes } from "styled-components";
-import { motion, useAnimationControls } from "framer-motion";
+import { motion, sync, useAnimationControls } from "framer-motion";
 
 const animation = keyframes`
   0% {
@@ -50,6 +50,20 @@ const TitleTwo = styled.div`
     animation: ${animation} 0.1s linear forwards;
   }
 `;
+const SubTitle = styled.div`
+  width: 300px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid blue;
+  position: relative;
+  overflow-x: hidden;
+  white-space: nowrap;
+`;
+const SubText = styled(motion.div)`
+  position: absolute;
+  overflow: hidden;
+`;
+
 const titleVariant = {
   start: {
     opacity: 0,
@@ -74,6 +88,15 @@ const textVariant = {
   },
 };
 
+const marquee = {
+  start: {
+    x: 0,
+  },
+  end: {
+    x: "-50%",
+  },
+};
+
 const Main = () => {
   const title = "Front Dev";
   const controls = useAnimationControls();
@@ -91,12 +114,28 @@ const Main = () => {
         ))}
       </TitleOne>
       <TitleTwo></TitleTwo>
-      <div>
-        {/* <p>
-          안녕하세요! 프론트엔드 개발자 민혜린 포트폴리오 입니다. 자유롭게
-          둘러보시고, 저를 찾아주세요!
-        </p> */}
-      </div>
+      <SubTitle>
+        <SubText
+          variants={marquee}
+          initial="start"
+          animate="end"
+          transition={{
+            ease: "linear",
+            repeatType: "loop",
+            duration: 20,
+            repeat: Infinity,
+          }}
+        >
+          <span>
+            안녕하세요! 프론트엔드 개발자를 희망하는 민혜린의 포트폴리오 입니다.
+            자유롭게 둘러보시고, 저를 찾아주세요!
+          </span>
+          <span>
+            안녕하세요! 프론트엔드 개발자를 희망하는 민혜린의 포트폴리오 입니다.
+            자유롭게 둘러보시고, 저를 찾아주세요!
+          </span>
+        </SubText>
+      </SubTitle>
     </Container>
   );
 };

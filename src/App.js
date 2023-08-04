@@ -2,6 +2,7 @@ import "./App.css";
 import { WorkVeiw } from "./Pages/WorkVeiw";
 import { Routes, Route } from "react-router-dom";
 import { styled } from "styled-components";
+import { AnimatePresence } from "framer-motion";
 
 import Main from "./Pages/Main";
 import Header from "./Components/Header";
@@ -32,15 +33,17 @@ function App() {
   return (
     <Container>
       <Header />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/work" element={<Work />} />
-        {WorkData.map((it) => (
-          <Route path={`/work/${it.id}`} element={<WorkVeiw work={it} />} />
-        ))}
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/work" element={<Work />} />
+          {WorkData.map((it) => (
+            <Route path={`/work/${it.id}`} element={<WorkVeiw work={it} />} />
+          ))}
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </AnimatePresence>
       <Navbar />
     </Container>
   );

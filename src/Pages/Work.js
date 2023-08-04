@@ -30,10 +30,19 @@ const Work = () => {
     end: {
       opacity: 1,
     },
+    out: {
+      opacity: 0,
+    },
   };
 
   return (
-    <Container variants={containerVariant} initial="start" animate="end">
+    <Container
+      variants={containerVariant}
+      initial="start"
+      animate="end"
+      exit="out"
+      transition={{ duration: 0.5 }}
+    >
       {WorkData.map((work, index) => (
         <WorkItem key={index} work={work} index={index} />
       ))}

@@ -29,12 +29,13 @@ const Container = styled(motion.div)`
   @media screen and (max-width: 768px) {
     width: 100vw;
     height: 100vh;
-    padding: 20px 30px;
+    padding: 30px 30px;
     //border: 1px solid red;
     top: -60px;
     left: -20px;
     .closeBtn {
-      top: 30px;
+      top: 20px;
+      right: 20px;
     }
   }
 `;
@@ -107,7 +108,6 @@ const Content = styled.div`
       width: 100%;
     }
   }
-
 `;
 const VideoBox = styled.div`
   width: 100%;
@@ -180,7 +180,7 @@ const WorkdetailView = ({ toggleModal, work }) => {
           <Content>
             <img src={work.imgs[0]} />
             <InfoBox>
-            <span>{work.detail[0]}</span>
+              <span>{work.detail[0]}</span>
             </InfoBox>
             <VideoBox>
               <video src={work.imgs[1]} autoPlay loop />
@@ -195,15 +195,18 @@ const WorkdetailView = ({ toggleModal, work }) => {
             <InfoBox>
               <span>{work.detail[3]}</span>
             </InfoBox>
-            {work.imgs[3] ? <>
-              <VideoBox>
-              <img src={work.imgs[3]} />
-            </VideoBox>
-            <InfoBox>
-            <span>{work.detail[4]}</span>
-            </InfoBox>
-            </> : "" }
-            
+            {work.imgs[3] ? (
+              <>
+                <VideoBox>
+                  <img src={work.imgs[3]} />
+                </VideoBox>
+                <InfoBox>
+                  <span>{work.detail[4]}</span>
+                </InfoBox>
+              </>
+            ) : (
+              ""
+            )}
           </Content>
         </ContentWrapper>
       </InnerWrapper>

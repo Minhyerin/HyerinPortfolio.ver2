@@ -27,6 +27,11 @@ const ContentWrapper = styled.div`
   }
 `;
 
+const TopWrapper = styled.div`
+  width: 100%;
+  position: relative;
+`;
+
 const Topdiv = styled(motion.div)`
   width: 100%;
   height: 70px;
@@ -50,7 +55,7 @@ const UnderLine = styled(motion.div)`
   @media screen and (max-width: 768px) {
     &.top {
       position: absolute;
-      top: 100px;
+      top: 15%;
     }
   }
 `;
@@ -72,7 +77,8 @@ const TopUnderdiv = styled(motion.div)`
     height: 200px;
     //border: 1px solid red;
     position: absolute;
-    transform: translateY(40px);
+    top: 16%;
+    //transform: translateY(40px);
     div {
       //border: 1px solid #fff;
       width: 100%;
@@ -282,40 +288,42 @@ export const WorkVeiw = ({ work }) => {
   return (
     <Container>
       <ContentWrapper>
-        <Topdiv variants={TopVariant} initial="start" animate="end">
-          <TitleCol variants={textVariant}>
-            <h1>{work.title}</h1>
-          </TitleCol>
-          <RoleCol variants={textVariant}>
-            <p className="p1">ROLE</p>
-          </RoleCol>
-          <TechCol variants={textVariant}>
-            <p className="p2">TECH</p>
-          </TechCol>
-          <DateCol variants={textVariant}>
-            <p className="p3">Date</p>
-          </DateCol>
-        </Topdiv>
-        <UnderLine
-          className="top"
-          variants={lineVariant}
-          initial="start"
-          animate="end"
-        ></UnderLine>
-        <TopUnderdiv>
-          <TitleCol>
-            <p className="p4">{work.subtitle}</p>
-          </TitleCol>
-          <RoleCol>
-            <p className="p5">{work.role}</p>
-          </RoleCol>
-          <TechCol>
-            <p className="p6">{work.tech}</p>
-          </TechCol>
-          <DateCol>
-            <p className="p7">{work.date}</p>
-          </DateCol>
-        </TopUnderdiv>
+        <TopWrapper>
+          <Topdiv variants={TopVariant} initial="start" animate="end">
+            <TitleCol variants={textVariant}>
+              <h1>{work.title}</h1>
+            </TitleCol>
+            <RoleCol variants={textVariant}>
+              <p className="p1">ROLE</p>
+            </RoleCol>
+            <TechCol variants={textVariant}>
+              <p className="p2">TECH</p>
+            </TechCol>
+            <DateCol variants={textVariant}>
+              <p className="p3">Date</p>
+            </DateCol>
+          </Topdiv>
+          <UnderLine
+            className="top"
+            variants={lineVariant}
+            initial="start"
+            animate="end"
+          ></UnderLine>
+          <TopUnderdiv>
+            <TitleCol>
+              <p className="p4">{work.subtitle}</p>
+            </TitleCol>
+            <RoleCol>
+              <p className="p5">{work.role}</p>
+            </RoleCol>
+            <TechCol>
+              <p className="p6">{work.tech}</p>
+            </TechCol>
+            <DateCol>
+              <p className="p7">{work.date}</p>
+            </DateCol>
+          </TopUnderdiv>
+        </TopWrapper>
         <Bottomdiv>
           <ImgBox>
             <img src={work.src} />

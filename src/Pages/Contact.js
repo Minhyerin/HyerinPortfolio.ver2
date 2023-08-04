@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -228,13 +228,17 @@ const Contact = () => {
       setMessage("");
     }
   };
-
-  const links = {
-    git: "",
-    blog: "",
-    kakao: "",
+  const containerVariant = {
+    start: {
+      opacity: 0,
+    },
+    end: {
+      opacity: 1,
+    },
+    out: {
+      opacity: 0,
+    },
   };
-
   const TopVariant = {
     start: {
       opacity: 0,
@@ -275,7 +279,13 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <Container
+      variants={containerVariant}
+      initial="start"
+      animate="end"
+      exit="out"
+      transition={{ duration: 0.5 }}
+    >
       <ContentWrapper>
         <Topdiv variants={TopVariant} initial="start" animate="end">
           <Title variants={textVariant}>
