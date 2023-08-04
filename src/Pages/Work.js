@@ -16,8 +16,8 @@ const Container = styled(motion.div)`
     //padding: 20px 0;
     height: 100vh;
     //border: 1px solid red;
-    //flex-direction: column;
-    //flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
   }
 `;
