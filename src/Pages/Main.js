@@ -1,29 +1,15 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { styled } from "styled-components";
-import { keyframes } from "styled-components";
 import { motion, sync, useAnimationControls } from "framer-motion";
 
-const animation = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(80px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
 const Container = styled.div`
+  width: 100%;
   flex: 1;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  //height: 100%;
-  //border: 1px solid red;
+  align-items: center;
 `;
 const TitleOne = styled(motion.div)`
   display: flex;
@@ -40,28 +26,29 @@ const TitleOne = styled(motion.div)`
 const SpanText = styled(motion.span)`
   display: block;
 `;
-const TitleTwo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  h1 {
-    font-size: 60px;
-    animation: ${animation} 0.1s linear forwards;
-  }
-`;
 const SubTitle = styled.div`
   width: 300px;
-  height: 50px;
-  border-radius: 30px;
-  border: 1px solid blue;
+  height: 40px;
   position: relative;
   overflow-x: hidden;
   white-space: nowrap;
+
+  //border-radius: 30px;
+  border-bottom: 1px solid #333;
 `;
 const SubText = styled(motion.div)`
   position: absolute;
   overflow: hidden;
+  top: 8px;
+  span {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    span {
+      font-size: 14px;
+    }
+  }
 `;
 
 const titleVariant = {
@@ -113,7 +100,6 @@ const Main = () => {
           </span>
         ))}
       </TitleOne>
-      <TitleTwo></TitleTwo>
       <SubTitle>
         <SubText
           variants={marquee}
