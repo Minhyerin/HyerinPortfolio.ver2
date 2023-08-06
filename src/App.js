@@ -22,6 +22,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: space-between;
+  overflow: hidden;
 
   @media screen and (max-width: 768px) {
     width: 100vw;
