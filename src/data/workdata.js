@@ -139,11 +139,11 @@ export const WorkData = [
     role: "Design & Development",
     tech: "React",
     date: "2023.07",
-    info: "리액트 실습으로 진행한 간단한 Dairy 입니다.",
+    info: "리액트 실습으로 진행한 간단한 Dairy 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고 데이터는 localstorage에 저장됩니다",
     imgs: [diary1, diary2, diary3],
     figma: "",
     desc: [
-      "리액트 실습으로 진행한 간단한 Dairy 입니다. 데이터는 localstorage에 저장됩니다.",
+      "리액트 실습으로 진행한 간단한 Dairy 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고 데이터는 localstorage에 저장됩니다.",
     ],
     detail: [
       "작성자, 일기, 감정을 선택하여 입력하는 Diary 입니다. ",
