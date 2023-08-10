@@ -36,7 +36,7 @@ export const WorkData = [
   {
     id: 1,
     thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb1.png",
-    src: mock1,
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-mock1.png",
     link: "https://hugmom-b6187.web.app/html/01-intro.html",
     title: "Hugmom",
     subtitle: "산후조리원 산모들을 위한 쇼핑몰 웹사이트 & 모바일",
@@ -62,7 +62,7 @@ export const WorkData = [
   {
     id: 2,
     thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb2.png",
-    src: mock2,
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-mock2.png",
     link: "https://hyerin-hugmom.netlify.app",
     title: "Hugmom React.ver",
     subtitle: "Hugmom 사이트를 React로 재구성",
@@ -86,7 +86,7 @@ export const WorkData = [
   {
     id: 3,
     thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb3.png",
-    src: mock3,
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netfilx-mock.png",
     link: "https://hyerin-react-netflix.netlify.app",
     title: "Netflix",
     subtitle: "React 를 활용한 Netflix 웹사이트",
@@ -109,7 +109,7 @@ export const WorkData = [
   {
     id: 4,
     thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb4.png",
-    src: mock4,
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/todolist-mock.png",
     link: "https://hyerin-react-todolist.netlify.app",
     title: "React TodoList",
     subtitle: "React를 활용한 TodoList",
@@ -132,7 +132,7 @@ export const WorkData = [
   {
     id: 5,
     thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb5.png",
-    src: mock5,
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/diary-mock.png",
     link: "https://hyerin-react-diary.netlify.app",
     title: "React Diary",
     subtitle: "React를 활용한 Diary",
