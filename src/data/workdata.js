@@ -35,7 +35,7 @@ import diary3 from "../imgs/diary-video2.mp4";
 export const WorkData = [
   {
     id: 1,
-    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb1.png",
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb1.png",
     src: mock1,
     link: "https://hugmom-b6187.web.app/html/01-intro.html",
     title: "Hugmom",
@@ -61,7 +61,7 @@ export const WorkData = [
   },
   {
     id: 2,
-    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb2.png",
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb2.png",
     src: mock2,
     link: "https://hyerin-hugmom.netlify.app",
     title: "Hugmom React.ver",
@@ -85,7 +85,7 @@ export const WorkData = [
   },
   {
     id: 3,
-    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb3.png",
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb3.png",
     src: mock3,
     link: "https://hyerin-react-netflix.netlify.app",
     title: "Netflix",
@@ -108,7 +108,7 @@ export const WorkData = [
   },
   {
     id: 4,
-    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb4.png",
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb4.png",
     src: mock4,
     link: "https://hyerin-react-todolist.netlify.app",
     title: "React TodoList",
@@ -131,7 +131,7 @@ export const WorkData = [
   },
   {
     id: 5,
-    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb5.png",
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb5.png",
     src: mock5,
     link: "https://hyerin-react-diary.netlify.app",
     title: "React Diary",
