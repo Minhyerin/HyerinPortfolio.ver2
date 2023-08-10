@@ -35,7 +35,7 @@ import diary3 from "../imgs/diary-video2.mp4";
 export const WorkData = [
   {
     id: 1,
-    thumb: thumb1,
+    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb1.png",
     src: mock1,
     link: "https://hugmom-b6187.web.app/html/01-intro.html",
     title: "Hugmom",
@@ -54,14 +54,14 @@ export const WorkData = [
     detail: [
       "허그맘 로고디자인 및 폰트 선정 / 산후조리원몰 / 산후조리원 졸업 몰 / 문의하기 / 아이디 및 비밀번호 찾기 페이지를 담당하여 진행했습니다.",
       "상단 헤더와 푸터 디자인 및 코딩 / 슬라이드 배너 이미지 디자인 및 전반적인 레이아웃 디자인을 진행하였습니다.",
-      "홈페이지에서는 지정된 아이디와 비밀번호로 로그인을 해야 제품의 금액과 상세페이지를 볼 수 있습니다.",
+      "홈페이지에서는 지정된 아이디와 비밀번호로 로그인을 해야 제품의 금액과 상세페이지를 볼 수 있습니다. (ID / PW : hugmom123)",
       "산후조리원 몰, 산후조리원 졸업 몰 각탭은 인기상품 / 식품 / 육아용품 / 산모용품으로 나뉘며 산후조리원 졸업몰에는 공동구매 페이지가 추가되어 있습니다.",
       "해당 프로젝트는 모바일에서도 화면 구현이 가능하도록 미디어쿼리를 사용해 반응형 웹으로 제작하였습니다.",
     ],
   },
   {
     id: 2,
-    thumb: thumb2,
+    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb2.png",
     src: mock2,
     link: "https://hyerin-hugmom.netlify.app",
     title: "Hugmom React.ver",
@@ -77,7 +77,7 @@ export const WorkData = [
     ],
     detail: [
       "홈페이지는 슬라이더 배너와 각 제품을 JSON파일의 데이터를 불러와 출력하여 구현하였습니다.",
-      "로그인을 하지 않은 상태에서 제품을 클릭했을 시에는 로그인 페이지로 이동하며, 로그인을 통해 상세페이지를 확인 할 수 있습니다. (ID / PW : hugmom123)",
+      "로그인을 하지 않은 상태에서 제품을 클릭했을 시에는 로그인 페이지로 이동하며, 로그인을 통해 상세페이지를 확인 할 수 있습니다.",
       "상세페이지 역시 JSON 파일의 데이터를 가져와 출력하여 구현했습니다.",
       "검색창에 키워드를 입력시 해당하는 키워드를 가진 제품을 출력하도록 구현하였습니다.",
       "해당 프로젝트는 모바일에서도 화면 구현이 가능하도록 미디어쿼리를 사용해 반응형 웹으로 제작하였습니다.",
@@ -85,7 +85,7 @@ export const WorkData = [
   },
   {
     id: 3,
-    thumb: thumb3,
+    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb3.png",
     src: mock3,
     link: "https://hyerin-react-netflix.netlify.app",
     title: "Netflix",
@@ -108,7 +108,7 @@ export const WorkData = [
   },
   {
     id: 4,
-    thumb: thumb4,
+    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb4.png",
     src: mock4,
     link: "https://hyerin-react-todolist.netlify.app",
     title: "React TodoList",
@@ -131,7 +131,7 @@ export const WorkData = [
   },
   {
     id: 5,
-    thumb: thumb5,
+    thumb: "https://hyerin-portfolio-imgs.s3.ap-northeast-2.amazonaws.com/thumb5.png",
     src: mock5,
     link: "https://hyerin-react-diary.netlify.app",
     title: "React Diary",
