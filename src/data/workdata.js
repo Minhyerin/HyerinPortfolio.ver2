@@ -116,11 +116,11 @@ export const WorkData = [
     role: "Design & Development",
     tech: "React",
     date: "2023.07",
-    info: "리액트 실습으로 진행한 간단한 Todo List 입니다.",
+    info: "리액트 실습으로 진행한 간단한 Todo List 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고, useMemo 훅을 사용해 컴포넌트의 성능을 최적화시키는 방법에 대해 익혔습니다. 데이터는 localstorage에 저장됩니다.",
     imgs: [todolist1, todolist2, todolist3],
     figma: "",
     desc: [
-      "리액트 실습으로 진행한 간단한 Todo List 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고, useMemo 훅을 사용해 컴포넌트의 성능을 최적화시키는 방법에 대해 익혔습니다.",
+      "리액트 실습으로 진행한 간단한 Todo List 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고, useMemo 훅을 사용해 컴포넌트의 성능을 최적화시키는 방법에 대해 익혔습니다. 데이터는 localstorage에 저장됩니다.",
     ],
     detail: [
       "메모장의 느낌이 나도록 아기자기한 느낌으로 디자인 해보았습니다.",
@@ -139,12 +139,14 @@ export const WorkData = [
     role: "Design & Development",
     tech: "React",
     date: "2023.07",
-    info: "리액트 실습으로 진행한 간단한 Dairy 입니다.",
+    info: "리액트 실습으로 진행한 간단한 Dairy 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고 데이터는 localstorage에 저장됩니다",
     imgs: [diary1, diary2, diary3],
     figma: "",
-    desc: ["리액트 실습으로 진행한 간단한 Dairy 입니다."],
+    desc: [
+      "리액트 실습으로 진행한 간단한 Dairy 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고 데이터는 localstorage에 저장됩니다.",
+    ],
     detail: [
-      "작성자, 일기, 감정을 선택하여 입력하는 Diary 입니다.",
+      "작성자, 일기, 감정을 선택하여 입력하는 Diary 입니다. ",
       "각 항목을 입력하고 저장하기 버튼을 누르면 작성한 시간도 함께 일기 리스트에 출력됩니다.",
       "만약 항목이 비어있거나 작성 되지 않았다면, 저장하기를 클릭시 해당 항목에 포커스 됩니다.",
       "작성된 일기는 수정 및 삭제가 가능합니다.",
