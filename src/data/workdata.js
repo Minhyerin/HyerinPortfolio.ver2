@@ -1,36 +1,25 @@
-import mock1 from "../imgs/hugmom-mock1.png";
-import mock2 from "../imgs/hugmom-mock2.png";
-import mock3 from "../imgs/netfilx-mock.png";
-import mock4 from "../imgs/todolist-mock.png";
-import mock5 from "../imgs/diary-mock.png";
 
-import thumb1 from "../imgs/thumb1.png";
-import thumb2 from "../imgs/thumb2.png";
-import thumb3 from "../imgs/thumb3.png";
-import thumb4 from "../imgs/thumb4.png";
-import thumb5 from "../imgs/thumb5.png";
+const hugmom1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom1.png";
+const hugmom2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-video1.mp4";
+const hugmom3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-video2.mp4";
+const hugmom4 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom4.gif";
 
-import hugmom1 from "../imgs/hugmom1.png";
-import hugmom2 from "../imgs/hugmom-video1.mp4";
-import hugmom3 from "../imgs/hugmom-video2.mp4";
-import hugmom4 from "../imgs/hugmom4.gif";
+const hugmom2_1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-1.png";
+const hugmom2_2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-video1.mp4";
+const hugmom2_3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-video2.mp4";
+const hugmom2_4 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-4.gif";
 
-import hugmom2_1 from "../imgs/hugmom2-1.png";
-import hugmom2_2 from "../imgs/hugmom2-video1.mp4";
-import hugmom2_3 from "../imgs/hugmom2-video2.mp4";
-import hugmom2_4 from "../imgs/hugmom2-4.gif";
+const netflix1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netflix1.png";
+const netflix2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netflix-video1.mp4";
+const netflix3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netflix-video2.mp4";
 
-import netflix1 from "../imgs/netflix1.png";
-import netflix2 from "../imgs/netflix-video1.mp4";
-import netflix3 from "../imgs/netflix-video2.mp4";
+const todolist1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/todolist1.png";
+const todolist2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/todolist-video1.mp4";
+const todolist3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/todolist-video2.mp4";
 
-import todolist1 from "../imgs/todolist1.png";
-import todolist2 from "../imgs/todolist-video1.mp4";
-import todolist3 from "../imgs/todolist-video2.mp4";
-
-import diary1 from "../imgs/diary1.png";
-import diary2 from "../imgs/diary-video1.mp4";
-import diary3 from "../imgs/diary-video2.mp4";
+const diary1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/diary1.png";
+const diary2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/diary-video1.mp4"
+const diary3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/diary-video2.mp4";
 
 export const WorkData = [
   {
