@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import { motion, AnimatePresence, sync } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { GrClose } from "react-icons/gr";
 import { FiExternalLink } from "react-icons/fi";
@@ -183,14 +183,14 @@ const WorkdetailView = ({ toggleModal, work }) => {
               <span>{work.detail[0]}</span>
             </InfoBox>
             <VideoBox>
-              <video src={work.imgs[1]} autoPlay loop muted />
+              <video src={work.imgs[1]} autoPlay loop playsinline muted />
             </VideoBox>
             <InfoBox>
               <span>{work.detail[1]}</span>
               <span>{work.detail[2]}</span>
             </InfoBox>
             <VideoBox>
-              <video src={work.imgs[2]} autoPlay loop muted />
+              <video src={work.imgs[2]} autoPlay loop playsinline muted />
             </VideoBox>
             <InfoBox>
               <span>{work.detail[3]}</span>

@@ -1,42 +1,31 @@
-import mock1 from "../imgs/hugmom-mock1.png";
-import mock2 from "../imgs/hugmom-mock2.png";
-import mock3 from "../imgs/netfilx-mock.png";
-import mock4 from "../imgs/todolist-mock.png";
-import mock5 from "../imgs/diary-mock.png";
 
-import thumb1 from "../imgs/thumb1.png";
-import thumb2 from "../imgs/thumb2.png";
-import thumb3 from "../imgs/thumb3.png";
-import thumb4 from "../imgs/thumb4.png";
-import thumb5 from "../imgs/thumb5.png";
+const hugmom1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom1.png";
+const hugmom2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-video1.mp4";
+const hugmom3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-video2.mp4";
+const hugmom4 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom4.gif";
 
-import hugmom1 from "../imgs/hugmom1.png";
-import hugmom2 from "../imgs/hugmom-video1.mp4";
-import hugmom3 from "../imgs/hugmom-video2.mp4";
-import hugmom4 from "../imgs/hugmom4.gif";
+const hugmom2_1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-1.png";
+const hugmom2_2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-video1.mp4";
+const hugmom2_3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-video2.mp4";
+const hugmom2_4 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-4.gif";
 
-import hugmom2_1 from "../imgs/hugmom2-1.png";
-import hugmom2_2 from "../imgs/hugmom2-video1.mp4";
-import hugmom2_3 from "../imgs/hugmom2-video2.mp4";
-import hugmom2_4 from "../imgs/hugmom2-4.gif";
+const netflix1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netflix1.png";
+const netflix2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netflix-video1.mp4";
+const netflix3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netflix-video2.mp4";
 
-import netflix1 from "../imgs/netflix1.png";
-import netflix2 from "../imgs/netflix-video1.mp4";
-import netflix3 from "../imgs/netflix-video2.mp4";
+const todolist1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/todolist1.png";
+const todolist2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/todolist-video1.mp4";
+const todolist3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/todolist-video2.mp4";
 
-import todolist1 from "../imgs/todolist1.png";
-import todolist2 from "../imgs/todolist-video1.mp4";
-import todolist3 from "../imgs/todolist-video2.mp4";
-
-import diary1 from "../imgs/diary1.png";
-import diary2 from "../imgs/diary-video1.mp4";
-import diary3 from "../imgs/diary-video2.mp4";
+const diary1 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/diary1.png";
+const diary2 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/diary-video1.mp4"
+const diary3 = "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/diary-video2.mp4";
 
 export const WorkData = [
   {
     id: 1,
-    thumb: thumb1,
-    src: mock1,
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb1.png",
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-mock1.png",
     link: "https://hugmom-b6187.web.app/html/01-intro.html",
     title: "Hugmom",
     subtitle: "산후조리원 산모들을 위한 쇼핑몰 웹사이트 & 모바일",
@@ -61,8 +50,8 @@ export const WorkData = [
   },
   {
     id: 2,
-    thumb: thumb2,
-    src: mock2,
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb2.png",
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-mock2.png",
     link: "https://hyerin-hugmom.netlify.app",
     title: "Hugmom React.ver",
     subtitle: "Hugmom 사이트를 React로 재구성",
@@ -85,8 +74,8 @@ export const WorkData = [
   },
   {
     id: 3,
-    thumb: thumb3,
-    src: mock3,
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb3.png",
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netfilx-mock.png",
     link: "https://hyerin-react-netflix.netlify.app",
     title: "Netflix",
     subtitle: "React 를 활용한 Netflix 웹사이트",
@@ -108,8 +97,8 @@ export const WorkData = [
   },
   {
     id: 4,
-    thumb: thumb4,
-    src: mock4,
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb4.png",
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/todolist-mock.png",
     link: "https://hyerin-react-todolist.netlify.app",
     title: "React TodoList",
     subtitle: "React를 활용한 TodoList",
@@ -131,8 +120,8 @@ export const WorkData = [
   },
   {
     id: 5,
-    thumb: thumb5,
-    src: mock5,
+    thumb: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/thumb5.png",
+    src: "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/diary-mock.png",
     link: "https://hyerin-react-diary.netlify.app",
     title: "React Diary",
     subtitle: "React를 활용한 Diary",
