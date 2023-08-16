@@ -90,7 +90,7 @@ const TopUnderdiv = styled(motion.div)`
   }
 `;
 const TitleCol = styled(motion.div)`
-  width: 450px;
+  width: 420px;
   over-flow: hidden;
   h1 {
     display: block;
@@ -108,7 +108,7 @@ const TitleCol = styled(motion.div)`
   }
 `;
 const RoleCol = styled(motion.div)`
-  width: 250px;
+  width: 180px;
   p.p1 {
     font-size: 16px;
   }
@@ -125,7 +125,8 @@ const RoleCol = styled(motion.div)`
   }
 `;
 const TechCol = styled(motion.div)`
-  width: 200px;
+  width: 280px;
+
   p.p2 {
     font-size: 16px;
   }
@@ -142,7 +143,7 @@ const TechCol = styled(motion.div)`
   }
 `;
 const DateCol = styled(motion.div)`
-  width: 150px;
+  width: 100px;
   p.p3 {
     font-size: 16px;
   }
