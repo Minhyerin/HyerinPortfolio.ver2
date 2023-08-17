@@ -186,6 +186,7 @@ const WorkdetailView = ({ toggleModal, work }) => {
             </InfoBox>
             <VideoBox>
               <video
+                poster={work.imgs[0]}
                 controls="true"
                 width="100%"
                 height="100%"
@@ -203,6 +204,7 @@ const WorkdetailView = ({ toggleModal, work }) => {
             </InfoBox>
             <VideoBox>
               <video
+                poster={work.imgs[0]}
                 controls="true"
                 width="100%"
                 height="100%"
