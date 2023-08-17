@@ -183,8 +183,8 @@ const WorkdetailView = ({ toggleModal, work }) => {
               <span>{work.detail[0]}</span>
             </InfoBox>
             <VideoBox>
-              <video width="100%" autoPlay loop playsInline muted>
-                <source src={work.imgs[1]} />
+              <video width="100%" height="100%" autoPlay loop playsInline muted>
+                <source src={work.imgs[1]} type="video/mp4" />
               </video>
             </VideoBox>
             <InfoBox>
@@ -192,8 +192,8 @@ const WorkdetailView = ({ toggleModal, work }) => {
               <span>{work.detail[2]}</span>
             </InfoBox>
             <VideoBox>
-              <video width="100%" autoPlay loop playsInline muted>
-                <source src={work.imgs[2]} />
+              <video width="100%" height="100%" autoPlay loop playsInline muted>
+                <source src={work.imgs[2]} type="video/mp4" />
               </video>
             </VideoBox>
             <InfoBox>
