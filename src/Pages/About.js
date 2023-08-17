@@ -261,6 +261,7 @@ const About = () => {
                 <span>HTML / CSS</span>
                 <span>JavaScript</span>
                 <span>React / Redux</span>
+                <span>Typescript</span>
                 <span>PhotoShop</span>
                 <span>Illustrator</span>
                 <span>Figma</span>
