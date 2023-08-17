@@ -263,6 +263,7 @@ const About = () => {
                 <span>React / Redux</span>
                 <span>PhotoShop</span>
                 <span>Illustrator</span>
+                <span>Figma</span>
               </div>
             </Skillbox>
           </DescDiv>
