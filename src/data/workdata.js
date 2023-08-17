@@ -109,7 +109,7 @@ export const WorkData = [
     imgs: [todolist1, todolist2, todolist3],
     figma: "",
     desc: [
-      "리액트 실습으로 진행한 간단한 Todo List 입니다. 리액트의 useReducer 훅을 사용하여 데이터를 관리하고, useMemo 훅을 사용해 컴포넌트의 성능을 최적화시키는 방법에 대해 익혔습니다. 데이터는 localstorage에 저장됩니다.",
+      "리액트 실습으로 진행한 간단한 Todo List 입니다. 리액트의 useReducer hook을 사용하여 데이터를 관리하고, useMemo hook을 사용해 컴포넌트의 성능을 최적화시키는 방법에 대해 익혔습니다. 데이터는 localstorage에 저장되고 불러올 수 있습니다.",
     ],
     detail: [
       "메모장의 느낌이 나도록 아기자기한 느낌으로 디자인 해보았습니다.",
@@ -128,11 +128,11 @@ export const WorkData = [
     role: "Design & Development",
     tech: "React",
     date: "2023.07",
-    info: "리액트 실습으로 진행한 간단한 Dairy 입니다. 리액트의 useReducer hook을 사용하여 데이터를 관리하고 데이터는 localstorage에 저장됩니다",
+    info: "리액트 실습으로 진행한 간단한 Dairy 입니다. 리액트의 useReducer hook을 사용하여 데이터를 관리하고 데이터는 localstorage에 저장되고 불러올 수 있습니다.",
     imgs: [diary1, diary2, diary3],
     figma: "",
     desc: [
-      "리액트 실습으로 진행한 간단한 Dairy 입니다. 리액트의 useReducer hook을 사용하여 데이터를 관리하고 데이터는 localstorage에 저장됩니다.",
+      "리액트 실습으로 진행한 간단한 Dairy 입니다. 리액트의 useReducer hook을 사용하여 데이터를 관리하고 데이터는 localstorage에 저장되고 불러올 수 있습니다.",
     ],
     detail: [
       "작성자, 일기, 감정을 선택하여 입력하는 Diary 입니다. ",

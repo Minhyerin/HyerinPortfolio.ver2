@@ -27,14 +27,14 @@ const SpanText = styled(motion.span)`
   display: block;
 `;
 const SubTitle = styled.div`
-  width: 300px;
+  width: 360px;
   height: 40px;
   position: relative;
   overflow-x: hidden;
   white-space: nowrap;
 
-  border-radius: 30px;
-  border: 1px solid #333;
+  //border-radius: 30px;
+  border-bottom: 1px solid #333;
 `;
 const SubText = styled(motion.div)`
   position: absolute;
