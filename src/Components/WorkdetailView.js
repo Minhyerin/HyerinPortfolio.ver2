@@ -111,9 +111,11 @@ const Content = styled.div`
 `;
 const VideoBox = styled.div`
   width: 100%;
+  height: 100%;
   text-align: center;
   video {
     width: 100%;
+    height: 100%;
   }
   img {
     width: 250px;
