@@ -13,10 +13,10 @@ const Container = styled(motion.div)`
   justify-content: center;
   gap: 20px;
   @media screen and (max-width: 768px) {
-    //padding: 20px 0;
-    height: 100vh;
+    padding: 20px 0;
+    //height: 100vh;
     //border: 1px solid red;
-    flex-direction: column;
+    //flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
   }
