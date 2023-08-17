@@ -6,15 +6,18 @@
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  --vh: 100%;
+}
 
+html,
+body {
+  height: 100vh;
+  height: var(--vh);
+}
 * {
   font-family: "SUIT-Regular";
   box-sizing: border-box;
-}
-body {
-  height: 100vh;
-height: -webkit-fill-available;
-height: fill-available;
 }
 a {
   text-decoration: none;
