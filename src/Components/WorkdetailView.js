@@ -58,6 +58,13 @@ const Title = styled.div`
     font-size: 24px;
     display: flex;
     align-items: center;
+    span {
+      font-size: 14px;
+      margin-left: 10px;
+      padding: 5px 8px;
+      color: #2d2424;
+      border-radius: 15px;
+    }
     .linkBtn {
       cursor: pointer;
       font-size: 20px;
@@ -162,6 +169,11 @@ const WorkdetailView = ({ toggleModal, work }) => {
         <Title>
           <h1>
             {work.title}
+            <span style={
+                  work.id === 1
+                    ? { backgroundColor: "#E7B10A" }
+                    : { backgroundColor: "#e0c097" }
+                }>{work.id == 1 ? "Team Project" : "Toy Project"}</span>
             <Link target="blank" to={work.link}>
               <FiExternalLink className="linkBtn" />
             </Link>
