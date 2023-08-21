@@ -51,7 +51,7 @@ const Topdiv = styled(motion.div)`
 const UnderLine = styled(motion.div)`
   width: 0;
   height: 2px;
-  background-color: #333;
+  background-color: #5c3d2e;
   @media screen and (max-width: 768px) {
     &.top {
       position: absolute;
@@ -91,10 +91,22 @@ const TopUnderdiv = styled(motion.div)`
 `;
 const TitleCol = styled(motion.div)`
   width: 420px;
+  display: flex;
+  align-items: center;
   over-flow: hidden;
   h1 {
+    color: #2d2424;
     display: block;
     font-size: 24px;
+  }
+  span {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #2d2424;
+    padding: 5px 8px;
+    border-radius: 15px;
   }
   @media screen and (max-width: 768px) {
     margin-bottom: 20px;
@@ -310,6 +322,15 @@ export const WorkVeiw = ({ work }) => {
           <Topdiv variants={TopVariant} initial="start" animate="end">
             <TitleCol variants={textVariant}>
               <h1>{work.title}</h1>
+              <span
+                style={
+                  work.id === 1
+                    ? { backgroundColor: "#E7B10A" }
+                    : { backgroundColor: "#e0c097" }
+                }
+              >
+                {work.id === 1 ? "Team Project" : "Toy Project"}
+              </span>
             </TitleCol>
             <RoleCol variants={textVariant}>
               <p className="p1">ROLE</p>

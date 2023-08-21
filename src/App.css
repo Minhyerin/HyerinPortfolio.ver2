@@ -21,7 +21,15 @@ body {
 }
 a {
   text-decoration: none;
-  color: #333;
+  color: #2d2424;
+}
+h1,
+h2,
+h3,
+h4,
+span,
+p {
+  color: #2d2424;
 }
 ul,
 li {
