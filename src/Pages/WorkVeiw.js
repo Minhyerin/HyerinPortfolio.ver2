@@ -237,7 +237,7 @@ const Buttons = styled.div`
     font-weight: normal;
     font-size: 14px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.4s ease-in-out;
     &:hover {
       letter-spacing: 2px;
     }
@@ -251,7 +251,7 @@ const Buttons = styled.div`
     font-weight: normal;
     font-size: 14px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.4s ease-in-out;
     &:hover {
       letter-spacing: 2px;
     }

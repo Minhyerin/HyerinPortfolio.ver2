@@ -112,9 +112,9 @@ const Form = styled.form`
     cursor: pointer;
     background-color: #333;
     color: #fff;
-    transition: 0.3s;
+    transition: 0.4s; ease-in-out;
     &:hover {
-      letter-spacing: 2px;
+      letter-spacing: 3px;
     }
   }
   div.messageBox {

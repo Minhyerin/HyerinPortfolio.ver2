@@ -45,6 +45,7 @@ const TitleOne = styled(motion.div)`
 `;
 const SpanText = styled(motion.span)`
   display: block;
+  font-weight: 600;
 `;
 const SubTitle = styled.div`
   width: 360px;
