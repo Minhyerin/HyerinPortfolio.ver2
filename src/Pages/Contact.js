@@ -112,6 +112,10 @@ const Form = styled.form`
     cursor: pointer;
     background-color: #333;
     color: #fff;
+    transition: 0.3s;
+    &:hover {
+      letter-spacing: 2px;
+    }
   }
   div.messageBox {
     flex-direction: column;

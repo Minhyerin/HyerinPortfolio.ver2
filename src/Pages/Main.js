@@ -144,7 +144,7 @@ const Main = () => {
           </span>
         ))}
       </TitleOne>
-      <SubTitle>
+      {/* <SubTitle>
         <SubText
           variants={marquee}
           initial="start"
@@ -166,7 +166,7 @@ const Main = () => {
             자유롭게 둘러보시고, 저를 찾아주세요!
           </span>
         </SubText>
-      </SubTitle>
+      </SubTitle> */}
     </Container>
   );
 };

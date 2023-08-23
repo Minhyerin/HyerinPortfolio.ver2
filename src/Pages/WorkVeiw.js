@@ -237,6 +237,10 @@ const Buttons = styled.div`
     font-weight: normal;
     font-size: 14px;
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      letter-spacing: 2px;
+    }
   }
   button {
     padding: 10px;
@@ -247,6 +251,10 @@ const Buttons = styled.div`
     font-weight: normal;
     font-size: 14px;
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      letter-spacing: 2px;
+    }
   }
   @media screen and (max-width: 768px) {
     margin-left: 0;

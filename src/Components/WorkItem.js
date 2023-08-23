@@ -25,8 +25,8 @@ const Container = styled(motion.div)`
     bottom: -100px;
     padding: 0 20px;
     background-color: rgba(0, 0, 0, 0.4);
-    color: #fff;
     font-weight: bold;
+    color: #fff;
     transition: 0.8s;
   }
   &:hover {
