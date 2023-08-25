@@ -8,5 +8,5 @@
 팀프로젝트와 간단한 토이프로젝트들을 담았습니다. <br />
 </p>
 
-#### 🏠 URL : [https://www.hyerin-portfolip-v2.netlify.app]
+#### 🏠 URL : [https://www.hyerin-portfolio-v2.netlify.app]
 
