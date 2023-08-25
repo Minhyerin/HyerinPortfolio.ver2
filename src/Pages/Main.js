@@ -17,7 +17,7 @@ const Svg = styled.svg`
   height: 100px;
   path {
     stroke: #333;
-    stroke-width: 3px;
+    stroke-width: 5px;
   }
 `;
 const LogoBg = styled(motion.div)`
@@ -121,11 +121,7 @@ const Main = () => {
 
   return (
     <Container>
-      <Svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="1em"
-        viewBox="0 0 448 512"
-      >
+      <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <motion.path
           variants={svg}
           initial="start"
