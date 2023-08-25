@@ -1,20 +1,14 @@
-const hugmom1 =
-  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom1.png";
-const hugmom2 =
-  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-video1.mp4";
-const hugmom3 =
-  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom-video2.mp4";
-const hugmom4 =
-  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom4.gif";
+const baseUrl =
+  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/";
+const hugmom1 = `${baseUrl}hugmom1.png`;
+const hugmom2 = `${baseUrl}hugmom-video1.mp4`;
+const hugmom3 = `${baseUrl}hugmom-video2.mp4`;
+const hugmom4 = `${baseUrl}hugmom4.gif`;
 
-const hugmom2_1 =
-  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-1.png";
-const hugmom2_2 =
-  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-video1.mp4";
-const hugmom2_3 =
-  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-video2.mp4";
-const hugmom2_4 =
-  "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/hugmom2-4.gif";
+const hugmom2_1 = `${baseUrl}hugmom2-1.png`;
+const hugmom2_2 = `${baseUrl}hugmom2-video1.mp4`;
+const hugmom2_3 = `${baseUrl}hugmom2-video2.mp4`;
+const hugmom2_4 = `${baseUrl}hugmom2-4.gif`;
 
 const netflix1 =
   "https://hyerin-portfolio-v2-imgs.s3.ap-northeast-2.amazonaws.com/netflix1.png";
